@@ -1,0 +1,39 @@
+.about-cont h1 {
+  text-align: center;   
+  margin-top: var(--footer-links-header-margin-top);
+}
+
+.about-text-cont-main {
+  /* border: solid red 1px; */
+  margin-inline: auto;
+  width: clamp(200px, 70%, 700px);
+}
+
+.about-text-cont-main p,
+.about-text-cont-main ul {
+  /* border: solid red 1px; */
+  font-size: var(--footer-links-text-size);
+}
+
+.about-text-cont-main ul {
+  margin-left: 45px;
+}
+
+.about-sub-cont {
+  margin-bottom: 1.5rem;
+}
+
+.about-intro-txt:first-of-type {
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+}
+.about-intro-txt:last-of-type {
+  margin-bottom: 3rem;
+}
+
+.about-sub-cont h2 {
+    margin-bottom: 0.5rem;
+}
+.about-sub-cont:last-of-type {
+    margin-bottom: 5.5rem;
+}

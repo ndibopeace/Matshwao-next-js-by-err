@@ -1,0 +1,48 @@
+.instructions {
+  display: grid;
+  gap: 0.9rem;
+  width: min(100% - 2rem, 700px);
+  margin: 1.75rem auto 0;
+  padding: clamp(1.25rem, 4vw, 2rem) clamp(1.25rem, 4vw, 2rem)
+    clamp(1.25rem, 4vw, 2rem) clamp(2.5rem, 6vw, 3.5rem);
+  color: var(--ink, #1a1814);
+  list-style: decimal;
+  background: var(--surface, #fffefb);
+  border: 1px solid var(--line, #ddd9d3);
+  border-left: 3px solid var(--accent, #1a1814);
+  border-radius: 0 var(--radius, 10px) var(--radius, 10px) 0;
+  box-shadow: 0 12px 30px rgb(26 24 20 / 8%);
+  line-height: 1.55;
+}
+
+.instructions li::marker {
+  color: #111111;
+}
+
+.instructions-title {
+  width: min(100% - 2rem, 700px);
+  margin: 3rem auto 0.5rem;
+  color: var(--ink, #1a1814);
+  font-family: var(--font-head, Georgia, serif);
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  line-height: 1.1;
+}
+
+.instructions-intro {
+  width: min(100% - 2rem, 700px);
+  margin: 0 auto;
+  color: #000000;
+  font-size: 1.05rem;
+}
+
+.attempt-exam {
+
+    margin: 2.5rem auto;
+    /* border: 1px solid; */
+
+    display: block;
+    padding: 0.5rem;
+    font-size: large;
+
+
+}

@@ -1,0 +1,97 @@
+/* Instructions Component---------------------------------------------------------------------------------- */
+
+.instructions {
+  list-style-type: disc;
+  padding-left: 30px;
+}
+
+/* Instructions Component---------------------------------------------------------------------------------- */
+
+/* Quiz Component---------------------------------------------------------------------------------- */
+
+#quiz-title {
+  text-align: center;
+  margin-block: 20px;
+}
+
+.quiz-instruction {
+  margin-bottom: 20px;
+  width: clamp(01px, 50vw, 750px);
+  margin-inline: auto;
+  font-style: italic;
+  color: red;
+}
+
+.q-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  row-gap: 25px;
+
+  width: clamp(01px, 50vw, 750px);
+  margin-inline: auto;
+  /* border: solid 1px red; */
+}
+
+.q-text {
+  display: flex;
+  gap: 3px;
+}
+
+.lesson-image-wrapper {
+  position: relative;
+  width: clamp(100px, 70%, 400px);
+  aspect-ratio: 2/1.3;
+  margin-block: 15px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+
+
+.options-cont {
+  margin-top: 15px;
+  padding: 10px;
+  list-style-type: none;
+  border: solid 1px gray;
+  border-radius: 5px;
+  width: 85%;
+}
+
+.options-cont label {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 8px;
+
+  /* border: solid 1px red; */
+}
+
+.options-cont input {
+  flex-shrink: 0;
+  margin-top: 3.5px;
+}
+/* Quiz Component---------------------------------------------------------------------------------- */
+
+/* .correct {} */
+
+.correct::after {
+  content: " ✔ ";
+  font-size: 1.2rem;
+
+  color: rgb(8, 0, 255);
+  margin-right: 8px;
+  margin-top: -5px;
+  animation: popIn 0.2s ease-out forwards;
+}
+
+.wrong {
+  color: rgb(255, 0, 0);
+}
+.wrong::after {
+  content: " ✖ ";
+  font-size: 1.2rem;
+
+  color: rgb(255, 0, 0);
+  margin-right: 8px;
+  animation: popIn 0.2s ease-out forwards;
+}

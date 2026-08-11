@@ -1,0 +1,62 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #83848fc5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 500px;
+  /* blur-radius: 150px; */
+  text-align: center;
+}
+
+.status-pass {
+  display: flex;
+  border: solid green 1px;
+  border-radius: 15px;
+  padding: 4px 10px;
+  font-size: 1.2rem;
+  gap: 1.8rem;
+}
+
+.status-fail {
+  display: flex;
+  border: solid rgb(255, 0, 0) 1px;
+  border-radius: 15px;
+  padding: 4px 10px;
+  font-size: 1.2rem;
+  gap: 1.8rem;
+}
+
+.res {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 20px;
+  /* border: solid red 1px; */
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.review-btn {
+    padding: 5px 10px;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    background-color: rgb(12, 12, 223);
+    color: #ffffff;
+    border: none;
+}
