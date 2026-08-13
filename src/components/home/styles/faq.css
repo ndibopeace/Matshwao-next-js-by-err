@@ -1,12 +1,12 @@
 .faq {
   padding: 3rem 1rem;
-  background: #f8f9fa;
+  /*background: #f8f9fa;*/
 }
 
 .faq .container {
   max-width: 800px;
   margin: 0 auto;
-  /* border: solid red 1px */
+   /*border: solid red 1px */
 }
 .faq h2 {
   text-align: center;
@@ -60,6 +60,5 @@
 }
 @media (max-width: 600px) {
  .faq h2 { font-size: 1.5rem; }
- .faq-question { font-size: 0.95rem; }
+ .faq-question { font-size: 1rem; }
 }
-   

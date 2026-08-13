@@ -1,4 +1,5 @@
-import styles from "./header.module.css";
+import styles from "./styles/header.module.css";
+import HamburgerMenu from "./hamMenu";
 
 
 import Link from "next/link";
@@ -27,10 +28,14 @@ export default function Navbar() {
             <li>
               <Link href="/frequently-asked-questions">FAQs</Link>
             </li>
-            {/* <li>
-              <a href="#">Menu</a>
-            </li> */}
+            
           </ul>
+
+          <div className={styles.menuIcon}>
+            <HamburgerMenu />
+          </div>
+              
+            
         </nav>
       </header>
     </>
