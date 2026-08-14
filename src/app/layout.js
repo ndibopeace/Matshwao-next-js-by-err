@@ -2,6 +2,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 
+import ScrollTopBtn from "@components/reUsable/scrollTopBtn"
 import Header from "@components/reUsable/header";
 import Footer from "@components/reUsable/footer";
 
@@ -72,6 +73,8 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <Header />
+
+        <ScrollTopBtn />
 
         {children}
 

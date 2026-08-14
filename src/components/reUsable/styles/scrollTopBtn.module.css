@@ -1,0 +1,13 @@
+.scrollTopBtn {
+    /* display: inline; */
+    width:  0rem;
+    height: 0rem;
+    background-color: rgb(226, 6, 6);
+    /* color: white; */
+    /* border-radius: 50%; */
+    position: fixed;
+    /* top: 100px; */
+    bottom: 97px;
+    right: 55px;
+    border: none;
+}
