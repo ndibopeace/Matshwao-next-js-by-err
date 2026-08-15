@@ -1,13 +1,12 @@
 import Link from "next/link";
-import './styles/hero.css'
-
+import styles from "./styles/hero.module.css";
 
 export default function Hero() {
   return (
     <>
-      <section id="hero">
-        <div className="container">
-          <p className="hero-badge">Road License Theory</p>
+      <section id={`${styles.hero}`}>
+        <div className={styles.container}>
+          <p className={styles.heroBadge}>Road License Theory</p>
           <h1>
             Ace your theory test at <em>first try.</em>
           </h1>
@@ -15,30 +14,40 @@ export default function Hero() {
             Structured notes and practice quizzes covering everything you need
             to know before you hit the road.
           </p>
-          <div className="hero-actions">
-            <Link href='/curriculum' className="btn btn-dark">Start Learning</Link>
-            <Link href="/exam" className="btn take-quiz-btn">Take a Quiz</Link>
+          <div className={styles.heroActions}>
+            <Link
+              href="/curriculum"
+              className={`${styles.btn} ${styles.btnDark}`}
+            >
+              Start Learning
+            </Link>
+            <Link
+              href="/exam"
+              className={`${styles.btn} ${styles.takeQuizBtn}`}
+            >
+              Take a Quiz
+            </Link>
           </div>
         </div>
       </section>
 
-            <section className="choose-us" >
+      <section className={`${styles.chooseUs}`}>
         <h2>Why Choose Us?</h2>
 
-        <div className="why-us">
-          <div className="feature">
-            <div className="icon-con">
+        <div className={styles.whyUs}>
+          <div className={styles.feature}>
+            <div className={styles.iconCon}>
               <i className="fas fa-book"></i>
             </div>
             <h3>It&apos;s free to learn</h3>
             <p>
-              Unlike others out there, we don&apos;t charge you to learn. It&apos;s
-              completely free.
+              Unlike others out there, we don&apos;t charge you to learn.
+              It&apos;s completely free.
             </p>
           </div>
 
-          <div className="feature">
-            <div className="icon-con">
+          <div className={styles.feature}>
+            <div className={styles.iconCon}>
               <i className="fas fa-question-circle"></i>
             </div>
             <h3>Practice quizzes</h3>
@@ -49,8 +58,8 @@ export default function Hero() {
             </p>
           </div>
 
-          <div className="feature">
-            <div className="icon-con">
+          <div className={styles.feature}>
+            <div className={styles.iconCon}>
               <i className="fas fa-chart-line"></i>
             </div>
             <h3>Progress tracking</h3>
@@ -59,8 +68,8 @@ export default function Hero() {
             </p>
           </div>
 
-          <div className="feature" >
-            <div className="icon-con">
+          <div className={styles.feature}>
+            <div className={styles.iconCon}>
               <i className="fas fa-mobile-alt"></i>
             </div>
             <h3>Mobile-Friendly</h3>
@@ -72,19 +81,18 @@ export default function Hero() {
         </div>
       </section>
 
-      <div className="start-learning">
-
-        <div className="free child">
+      <div className={styles.startLearning}>
+        <div className={`${styles.free} ${styles.child}`}>
           <p className="">Start learning for free now with us!</p>
         </div>
 
-        <div className="no-trial child">
+        <div className={`${styles.noTrial} ${styles.child}`}>
           <p>No trial. No credit card required. Just your GitHub account.</p>
-          <Link href="/curriculum" className='try-free-btn'>Try free</Link >
+          <Link href="/curriculum" className="try-free-btn">
+            Try free
+          </Link>
         </div>
       </div>
-
-
     </>
   );
 }

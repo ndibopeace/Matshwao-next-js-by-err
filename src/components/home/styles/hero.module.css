@@ -17,7 +17,7 @@
   /* margin-top: 150px; */
 }
 
-.hero-badge {
+.heroBadge {
   display: inline-block;
   font-size: 0.72rem;
   font-weight: 600;
@@ -29,7 +29,7 @@
   margin-bottom: 1.4rem;
 }
 #hero h1 {
-  font-family: var(--font-head);
+  /* font-family: var(--font-head); */
   font-size: clamp(2.8rem, 7vw, 5.5rem);
   font-weight: 900;
   line-height: 1;
@@ -47,7 +47,7 @@
   max-width: 48ch;
   margin-inline: auto;
 }
-.hero-actions {
+.heroActions {
   display: flex;
   justify-content: center;
   gap: 0.8rem;
@@ -65,7 +65,7 @@
   border: 1px solid var(--ink);
   transition: all 0.2s;
 }
-.btn-dark {
+.btnDark {
   background: var(--ink);
   color: white;
   letter-spacing: 0.8px;
@@ -73,10 +73,10 @@
 .btn-dark:hover {
   color: blue;
 }
-.take-quiz-btn {
+.takeQuizBtn {
   background: transparent;
 }
-.take-quiz-btn:hover {
+.takeQuizBtn:hover {
   background: var(--surface-2);
 }
 
@@ -87,7 +87,7 @@
   padding: 1px;
 } */
 
-.why-us {
+.whyUs {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -109,19 +109,16 @@
   text-align: left;
 }
 
-.icon-con {
+.iconCon {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 60px;
   width: 60px;
-
   border-radius: 8px;
   background-color: #f2f2f2;
   margin-bottom: 20px;
   padding: 12px;
-
-  /* border: red 1px solid; */
 }
 
 .feature i {
@@ -135,14 +132,14 @@
   /* line-height: normal; */
 }
 
-.choose-us h2 {
+.chooseUs h2 {
   text-align: center;
   margin-top: clamp(0.5rem, 10vw, 4rem);
 }
 
 /* ------------------------------------CURRENTLY HERE----------------------------------------- */
 
-.start-learning {
+.startLearning {
   display: flex;
   gap: 1rem;
   width: clamp(200px, 95vw, 1050px);
@@ -162,7 +159,7 @@
   );
 }
 
-.start-learning .free p {
+.startLearning .free p {
   font-size: 2rem;
   font-weight: bold;
 }
@@ -174,11 +171,11 @@
   margin-right: 100px;
 }
 
-.no-trial p {
+.noTrial p {
   margin-bottom: 0.9rem;
 }
 
-.try-free-btn {
+.tryFree-btn {
   background: #eaeaea;
   color: var(--ink);
   padding: 0.2rem 1rem;
