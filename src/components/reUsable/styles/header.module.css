@@ -1,12 +1,13 @@
-.header {
-  margin-bottom: 4.2rem;
-}
+/* .header {
+  
+} */
 
 .headerLinks {
   position: fixed;
   top: 0;
-  z-index: 100;
+  /* z-index: 100; */
   width: 100%;
+  height: var(--margin-top-from-header);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -74,7 +75,7 @@
 
 @media (max-width: 480px) {
   .header {
-    margin-bottom: 4.2rem;
+    /* margin-bottom: 4.2rem; */
   }
 
   .headerLinks {

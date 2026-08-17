@@ -1,34 +1,36 @@
 import Link from "next/link";
 import styles from "./styles/hero.module.css";
+import Image from "next/image";
 
 export default function Hero() {
   return (
     <>
-      <section id={`${styles.hero}`}>
-        <div className={styles.container}>
-          <p className={styles.heroBadge}>Road License Theory</p>
-          <h1>
-            Ace your theory test at <em>first try.</em>
-          </h1>
-          <p>
-            Structured notes and practice quizzes covering everything you need
-            to know before you hit the road.
+      <section id={`${styles.hero_container}`}>
+
+        <div className={styles.hero_text}>
+          <p className={styles.heroBadge}>LETS DRIVE SAFELY</p>
+
+          <p className={styles.hero_child_text}>Featured Path: Class B License</p>
+
+          <h1>Don&apos;t spend 15K on a Learning bootcamp</h1>
+          <p className={styles.hero_child_text}>
+            Our Course Path helps motivated students/people pass at no extra
+            cost to you
           </p>
-          <div className={styles.heroActions}>
+
+          <div className={styles.start_learning_btn_con}>
             <Link
               href="/curriculum"
-              className={`${styles.btn} ${styles.btnDark}`}
+              className={`${styles.btn} ${styles.start_learning_btn}`}
             >
               Start Learning
             </Link>
-            <Link
-              href="/exam"
-              className={`${styles.btn} ${styles.takeQuizBtn}`}
-            >
-              Take a Quiz
-            </Link>
           </div>
         </div>
+
+        <div className={styles.hero_img_con}>
+            <Image src="/assets/images/hero.webp" alt="hero image" priority fill className={styles.hero_img} />
+          </div>
       </section>
 
       <section className={`${styles.chooseUs}`}>
@@ -86,9 +88,9 @@ export default function Hero() {
           <p className="">Start learning for free now with us!</p>
         </div>
 
-        <div className={`${styles.noTrial} ${styles.child}`}>
-          <p>No trial. No credit card required. Just your GitHub account.</p>
-          <Link href="/curriculum" className="try-free-btn">
+        <div className={`${styles.noTrial}`}>
+          <p>No trial. No credit card required. Just your time.</p>
+          <Link href="/curriculum" className={styles.tryFreeBtn}>
             Try free
           </Link>
         </div>
