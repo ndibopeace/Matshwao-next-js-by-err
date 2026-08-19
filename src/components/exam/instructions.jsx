@@ -1,4 +1,4 @@
-import "./instructions.css"
+import styles from "./instructions.module.css"
 
 export default function Instructions(props) {
   
@@ -7,11 +7,11 @@ export default function Instructions(props) {
   }
 
   return (
-    <div className="instructions-page">
-      <h1 className="instructions-title">Road Theory Exam</h1>
-      <p className="instructions-intro">Read these instructions before you begin.</p>
+    <div className={styles.instructions_page}>
+      <h1 className={styles.instructions_title}>Road Theory Exam</h1>
+      <p className={styles.instructions_intro}>Read these instructions before you begin.</p>
 
-      <ul className="instructions">
+      <ul className={styles.instructions}>
         <li>
           The exam contains 30 multiple-choice questions drawn from the course
           notes.
@@ -27,7 +27,7 @@ export default function Instructions(props) {
         <li>You may retake the exam as many times as you like.</li>
       </ul>
 
-      <button className="attempt-exam" onClick={startExam}>Begin Exam</button>
+      <button className={styles.attempt_exam} onClick={startExam}>Begin Exam</button>
     </div>
   );
 }

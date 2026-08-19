@@ -19,7 +19,7 @@
   color: #111111;
 }
 
-.instructions-title {
+.instructions_title {
   width: min(100% - 2rem, 700px);
   margin: 3rem auto 0.5rem;
   color: var(--ink, #1a1814);
@@ -28,14 +28,14 @@
   line-height: 1.1;
 }
 
-.instructions-intro {
+.instructions_intro {
   width: min(100% - 2rem, 700px);
   margin: 0 auto;
   color: #000000;
   font-size: 1.05rem;
 }
 
-.attempt-exam {
+.attempt_exam {
 
     margin: 2.5rem auto;
     /* border: 1px solid; */
