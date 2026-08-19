@@ -1,6 +1,7 @@
 "use client";
 
 // import { useRouter } from "next/navigation";
+import styles from "./quiz.css"
 
 import { useState } from "react";
 import Image from "next/image";
@@ -170,7 +171,7 @@ export default function Quiz() {
   }
 
   return (
-    <>
+    <div className="main_container">
       <h1 id="quiz-title">Road Theory Exam</h1>
       <p className="quiz-instruction">
         To pass this test, you need to correctly answer atleast 26/30 questions
@@ -254,24 +255,24 @@ export default function Quiz() {
           );
         })}
       </div>
-      <p>
+      <p className="unanswered_warning">
         {" "}
         {showUnansweredWarning &&
           `The following questions are unanswered: ${unAnsweredQues} You must answer all questions.`}{" "}
       </p>
 
       {!submitted ? (
-        <button className="attempt-exam" onClick={submitAnswers}>
+        <button className="submit exam_btn" onClick={submitAnswers}>
           Submit{" "}
         </button>
       ) : (
         <>
-          <p>
+          <p className="score_res_p">
             {" "}
             Your score is {score} out of {shuffled.length}. You can now review
             your answers
           </p>
-          <button className="attempt-exam" onClick={ () => window.location.reload() }>Close Review</button>
+          <button className="attempt-exam exam_btn" onClick={ () => window.location.reload() }>Close Review</button>
         </>
       )}
 
@@ -299,7 +300,7 @@ export default function Quiz() {
         </>
         
         )} */}
-    </>
+    </div>
   );
 }
 

@@ -7,7 +7,7 @@ export default function Instructions(props) {
   }
 
   return (
-    <div className={styles.instructions_page}>
+    <div className={styles.instructions_container}>
       <h1 className={styles.instructions_title}>Road Theory Exam</h1>
       <p className={styles.instructions_intro}>Read these instructions before you begin.</p>
 

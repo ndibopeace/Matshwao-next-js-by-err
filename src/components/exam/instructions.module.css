@@ -1,18 +1,25 @@
+.instructions_container {
+  border: solid 1px transparent;
+  display: block;
+  margin-top: var(--margin-top-from-header);
+}
+
 .instructions {
   display: grid;
-  gap: 0.9rem;
+  gap: clamp(0.2rem, 2vw, 0.9rem);
   width: min(100% - 2rem, 700px);
-  margin: 1.75rem auto 0;
+  margin: 1rem auto 0;
   padding: clamp(1.25rem, 4vw, 2rem) clamp(1.25rem, 4vw, 2rem)
     clamp(1.25rem, 4vw, 2rem) clamp(2.5rem, 6vw, 3.5rem);
-  color: var(--ink, #1a1814);
+  /* color: var(--ink, #1a1814); */
   list-style: decimal;
-  background: var(--surface, #fffefb);
-  border: 1px solid var(--line, #ddd9d3);
-  border-left: 3px solid var(--accent, #1a1814);
-  border-radius: 0 var(--radius, 10px) var(--radius, 10px) 0;
+  /* background: var(--surface, #fffefb); */
+  border: var(--border-color-lightgray-global);
+  border-left: 3px solid #1a1814;
+
+  border-radius: 0 10px 10px 0;
   box-shadow: 0 12px 30px rgb(26 24 20 / 8%);
-  line-height: 1.55;
+  /* line-height: 1.55; */
 }
 
 .instructions li::marker {
@@ -21,28 +28,40 @@
 
 .instructions_title {
   width: min(100% - 2rem, 700px);
-  margin: 3rem auto 0.5rem;
+  margin: clamp(1.5rem, 5vw, 3rem) auto 0.5rem;
+  text-align: center;
   color: var(--ink, #1a1814);
-  font-family: var(--font-head, Georgia, serif);
-  font-size: clamp(2rem, 5vw, 2.75rem);
+  /* font-family: var(--font-head, Georgia, serif); */
+  /* font-size: clamp(2rem, 5vw, 2.75rem); */
+  font-size: var(--font-size-H1);
   line-height: 1.1;
+  font-weight: 600;
+
+  /* border: solid 1px red; */
 }
 
 .instructions_intro {
   width: min(100% - 2rem, 700px);
-  margin: 0 auto;
+  margin: 25px auto 10px;
+  padding-left: 15px;
   color: #000000;
-  font-size: 1.05rem;
+  /* font-size: 1.05rem; */
+
+  /* border: solid 1px; */
 }
 
 .attempt_exam {
+  margin: 2.5rem auto;
+  border: 1px solid;
+  display: block;
+  padding: 0.5rem;
+  font-size: large;
+  
+}
+.attempt_exam:hover {
+  cursor: pointer;
+  background-color: #5238F9;
 
-    margin: 2.5rem auto;
-    /* border: 1px solid; */
-
-    display: block;
-    padding: 0.5rem;
-    font-size: large;
-
-
+  /* margin: 2.5rem auto; */
+  border: 1px solid transparent;
 }

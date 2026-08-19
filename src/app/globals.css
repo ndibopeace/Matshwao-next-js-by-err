@@ -26,13 +26,13 @@
   --ink: #1a1814;
   --ink-soft: #6b6560;
   --line: #ddd9d3;
-  --accent: #1a1814;
+  /* --accent: #1a1814; */
   --correct: #2d6a4f;
   --wrong: #c1440e;
   --font-head: "Playfair Display", serif;
   --font-body: "Epilogue", sans-serif;
   --max-w: 1100px;
-  --radius: 10px;
+  /* --radius: 10px; */
   /* --footer-links-text-size: clamp(1rem, 5vw, 10.2rem); */
   /* --footer-links-header-margin-top: 5rem; */
 }

@@ -17,24 +17,25 @@
   width: 500px;
   /* blur-radius: 150px; */
   text-align: center;
+
+   /* border: solid red 1px; */
 }
 
-.status-pass {
+.res_mini_containers {
   display: flex;
+  justify-content: center;
+  border-radius: 15px;
+  padding: 4px 10px;
+  gap: 1rem;
+
+}
+
+.status_pass {
   border: solid green 1px;
-  border-radius: 15px;
-  padding: 4px 10px;
-  font-size: 1.2rem;
-  gap: 1.8rem;
 }
 
-.status-fail {
-  display: flex;
+.status_fail {
   border: solid rgb(255, 0, 0) 1px;
-  border-radius: 15px;
-  padding: 4px 10px;
-  font-size: 1.2rem;
-  gap: 1.8rem;
 }
 
 .res {
@@ -43,7 +44,15 @@
   justify-content: center;
   gap: 5px;
   margin-top: 20px;
-  /* border: solid red 1px; */
+}
+
+.res_img {
+  width: clamp(70px, 10vw,  150px);
+  height: clamp(70px, 10vw, 150px);
+}
+
+.time {
+  display: none;
 }
 
 .buttons {
@@ -52,11 +61,29 @@
   margin-top: 15px;
 }
 
-.review-btn {
+.review_btn {
     padding: 5px 10px;
     margin-top: 10px;
     font-size: 1.2rem;
     background-color: rgb(12, 12, 223);
     color: #ffffff;
     border: none;
+}
+
+
+
+
+
+
+@media (max-width: 480px) {
+  .modal {
+  padding: 10px;
+  width: 100%;
+  /* blur-radius: 150px; */
+  text-align: center;
+  margin-inline: var(--phone-padding-sides);
+}
+
+
+  
 }

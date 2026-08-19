@@ -42,6 +42,7 @@ const styles = {
     borderRadius: "8px",
     width: "370px",
     textAlign: "center",
+    marginInline: "var(--phone-padding-sides)"
   },
   buttons: {
     display: "flex",

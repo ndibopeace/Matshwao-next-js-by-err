@@ -3,39 +3,73 @@
 .instructions {
   list-style-type: disc;
   padding-left: 30px;
+
+  /* border: red 100px solid; */
 }
 
 /* Instructions Component---------------------------------------------------------------------------------- */
 
+
+
+
+
+
+
+
+
 /* Quiz Component---------------------------------------------------------------------------------- */
+.main_container {
+  margin-top: var(--margin-top-from-header);
+  border: red 1px solid;
+}
+
+
 
 #quiz-title {
   text-align: center;
   margin-block: 20px;
+  font-size: var(--font-size-H1);
+  font-weight: 600;
+
+  /* border: red 1px solid; */
 }
 
 .quiz-instruction {
+
   margin-bottom: 20px;
   width: clamp(01px, 50vw, 750px);
   margin-inline: auto;
   font-style: italic;
   color: red;
+
+  /* border: red 1px solid; */
 }
+
+
+
+
+
+
 
 .q-container {
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
+  /* flex-wrap: nowrap; */
   row-gap: 25px;
 
   width: clamp(01px, 50vw, 750px);
   margin-inline: auto;
-  /* border: solid 1px red; */
+
+
+  border: solid 1px red;
 }
 
 .q-text {
   display: flex;
   gap: 3px;
+
+
+  /* border: red 1px solid; */
 }
 
 .lesson-image-wrapper {
@@ -45,6 +79,10 @@
   margin-block: 15px;
   border-radius: 5px;
   overflow: hidden;
+
+
+  /* border: red 1px solid; */
+
 }
 
 
@@ -56,6 +94,8 @@
   border: solid 1px gray;
   border-radius: 5px;
   width: 85%;
+
+  /* border: red 1px solid; */
 }
 
 .options-cont label {
@@ -69,7 +109,61 @@
 .options-cont input {
   flex-shrink: 0;
   margin-top: 3.5px;
+
+  /* border: red 1px solid; */
 }
+
+
+.score_res_p,
+.unanswered_warning {
+  margin-block: clamp(16px, 4vw, 64px);
+  width: clamp(01px, 50vw, 750px);
+  margin-inline: auto;
+}
+
+
+.exam_btn {
+  margin: 2.5rem auto;
+  border: 1px solid;
+  display: block;
+  padding: 0.5rem;
+  font-size: large;
+  
+}
+.exam_btn:hover {
+  cursor: pointer;
+  background-color: #5238F9;
+
+  /* margin: 2.5rem auto; */
+  border: 1px solid transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Quiz Component---------------------------------------------------------------------------------- */
 
 /* .correct {} */
@@ -94,4 +188,43 @@
   color: rgb(255, 0, 0);
   margin-right: 8px;
   animation: popIn 0.2s ease-out forwards;
+}
+
+
+
+
+@media (max-width: 480px) {
+
+  .main_container {
+  margin-top: var(--margin-top-from-header);
+  padding-inline: var(--phone-padding-sides);
+  border: transparent 1px solid;
+}
+
+.quiz-instruction {
+  /* margin-bottom: 20px; */
+  width: clamp(200px, 100%, 480px);
+  /* color: red; */
+  border: transparent 1px solid;
+}
+
+
+.q-container {
+  /* display: flex;
+  flex-direction: column; */
+  /* flex-wrap: nowrap; */
+  /* row-gap: 25px; */
+
+  width: clamp(200px, 100%, 480px);
+  /* margin-inline: auto; */
+
+
+  border: solid 1px transparent;
+}
+  
+
+.score_res_p,
+.unanswered_warning {
+  width: clamp(200px, 100%, 750px);
+}
 }
