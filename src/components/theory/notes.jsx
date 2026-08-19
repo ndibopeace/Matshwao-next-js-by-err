@@ -1,37 +1,5 @@
-// export default function RenderNotes({ notesArr, title, ...rest }) {
-
-//   {console.log(rest);}
-
-//   return (
-//     <>
-//       <title>{title}</title>
-//       <h1 className="topic-h1">{title}</h1>
-
-//       <div className="lessons-wrapper">
-//         {notesArr.map(({ id, question, answers, image }) => (
-//           <article className="note-card" key={`${id}`}>
-//             <span className="note-number">{id}.</span>
-//             <p className="note-question">{question}</p>
-//             {image && (
-//               <img className={rest.className} src={image.src} alt={image.alt} />
-//             )}
-
-//             <ol className="note-answers">
-//               {answers.map(({ label, text }) => (
-//                 <li>
-//                   {/* <li key={label}> */}
-//                   {/* <span className="answer-span">{label}.</span> */} {text}
-//                 </li>
-//               ))}
-//             </ol>
-//           </article>
-//         ))}
-//       </div>
-//     </>
-//   );
-// }
-
 import Image from "next/image";
+import styles from "@components/theory/lesson.module.css";
 
 export default function RenderNotes({ notesArr, title, ...rest }) {
   {
@@ -40,28 +8,29 @@ export default function RenderNotes({ notesArr, title, ...rest }) {
 
   return (
     <>
-      <title>{title}</title>
-      <h1 className="topic-h1">{title}</h1>
+      {/* <title>{title}</title> */}
+      <h1 className={styles.topic_h1}>{title}</h1>
 
-      <div className="lessons-wrapper">
+      <div className={styles.lessons_wrapper}>
+        
         {notesArr.map(({ question, answers, image }, id) => (
-          <article className="note-card" key={`${id}`}>
-            <span className="note-number">{id + 1}.</span>
-            <p className="note-question">{question}</p>
+          <article className={styles.note_card} key={`${id}`}>
+            <span className={styles.note_number}>{id + 1}.</span>
+            <p className={styles.note_question}>{question}</p>
             {image && (
-              <div className="lesson-image-wrapper">
+              <div className={styles.lesson_image_wrapper}>
                 <Image
-                  className={`lesson-image ${rest.className || ""}`}
+                  className={`${styles.lesson_image}`}
                   src={image.src}
                   alt={image.alt}
                   fill
-                  sizes="(max-width: 768px) 70vw, 400px"
+                  sizes="(max_width: 768px) 70vw, 400px"
                   priority= {false}
                 />
               </div>
             )}
 
-            <ol className="note-answers">
+            <ol className={styles.note_answers}>
               {answers.map((item) => (
                 <li key={item}>
                   {/* <li > */}

@@ -1,0 +1,16 @@
+.lesson_container {
+    display: flex;
+    gap: 1rem;
+    margin-top: var(--margin-top-from-header);
+    padding: var(--phone-padding-sides);
+}
+
+
+
+@media (max-width: 480px) {
+    .lesson_container {
+        margin-top: calc(var(--margin-top-from-header)*1.81);
+        /* border: solid 1px red; */
+    }
+}
+/* 1.75 */

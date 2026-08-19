@@ -8,19 +8,17 @@
 
 :root {
   /* final */
-  --border-color-lightgray: #1a181442 solid 1px;
+  /* --border-color-lightgray: #1a181442 solid 1px; */
+  --border-color-lightgray-global: rgba(0, 0, 0, 0.331) solid 1px;
   --margin-top-from-header: 50px;
-  
+  --phone-padding-sides: 1rem;
+
   --font-size-H1: clamp(1.75rem, 3vw, 3rem);
   --font-size-H2: clamp(1.5rem, 3vw, 2.5rem);
   --font-size-H3: clamp(1.25rem, 3vw, 2rem);
   --font-size-H4: clamp(1.125rem, 3vw, 1.625rem);
   --font-size-H5: clamp(1rem, 3vw, 1.25rem);
   /* final */
-
-
-
-
 
   --bg: #fffefe;
   --surface: #fffefb;
@@ -49,7 +47,8 @@ body {
   font-family:
     var(--font-googleSans), 
     var(--font-roboto), 
-    sans-serif, system-ui;
+    sans-serif, 
+    system-ui;
   line-height: 1.19; /* trial*/
   /* font-size: clamp(1rem, 2vw, 1.125rem); */
 }
@@ -61,4 +60,10 @@ a {
 
 a:active {
   color: red;
+}
+
+@media (max-width: 480px) {
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }

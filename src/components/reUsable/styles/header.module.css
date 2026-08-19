@@ -5,7 +5,7 @@
 .headerLinks {
   position: fixed;
   top: 0;
-  /* z-index: 100; */
+  z-index: 100;
   width: 100%;
   height: var(--margin-top-from-header);
   display: flex;

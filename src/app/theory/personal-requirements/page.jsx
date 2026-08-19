@@ -1,4 +1,3 @@
-import "@components/theory/lesson.css";
 import { lesson1Notes } from "@data/data";
 import Notes from "@components/theory/notes";
 
