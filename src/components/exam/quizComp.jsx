@@ -1,7 +1,7 @@
 "use client";
 
 // import { useRouter } from "next/navigation";
-import styles from "./quiz.css"
+import styles from "./quiz.module.css"
 
 import { useState } from "react";
 import Image from "next/image";
@@ -171,28 +171,28 @@ export default function Quiz() {
   }
 
   return (
-    <div className="main_container">
-      <h1 id="quiz-title">Road Theory Exam</h1>
-      <p className="quiz-instruction">
+    <div className={styles.main_container}>
+      <h1 id={styles.quiz_title}>Road Theory Exam</h1>
+      <p className={styles.quiz_instruction}>
         To pass this test, you need to correctly answer atleast 26/30 questions
         or get 87%.
       </p>
 
-      <div className="q-container">
+      <div className={styles.q_container}>
         {shuffled.map(({ question, options, key, image, correctOption }, i) => {
           return (
-            <div className="q-card" key={key}>
-              <p className="q-text">
-                <span className="q-number">{i + 1}. </span>
+            <div className={styles.q_card} key={key}>
+              <p className={styles.q_text}>
+                <span className={styles.q_number}>{i + 1}. </span>
 
                 {question}
               </p>
               {image && (
-                <div className="lesson-image-wrapper">
+                <div className={styles.lesson_image_wrapper}>
                   <Image
                     src={image.src}
                     alt={image.alt}
-                    className="q-img lesson-image"
+                    className={`${styles.q_img} ${styles.lesson_image}`}
                     fill
                     sizes="(max-width: 768px) 70vw, 400px"
                     priority={false}
@@ -201,7 +201,7 @@ export default function Quiz() {
               )}
 
               <ul
-                className="options-cont"
+                className={styles.options_cont}
                 onClick={setSelectedAnswer}
                 data-index={i}
               >
@@ -227,8 +227,8 @@ export default function Quiz() {
                     answerStatus === null
                       ? undefined
                       : answerStatus
-                        ? "correct"
-                        : "wrong";
+                        ? styles.correct
+                        : styles.wrong;
 
                   // console.log(selectedAnswers[i]);
                   let g =
@@ -238,7 +238,7 @@ export default function Quiz() {
 
                   return (
                     <li key={index}>
-                      <label className={`option ${(g && className) || ""}`}>
+                      <label className={`${styles.option} ${(g && className) || ""}`}>
                         <input
                           type="radio"
                           name={key}
@@ -255,24 +255,24 @@ export default function Quiz() {
           );
         })}
       </div>
-      <p className="unanswered_warning">
+      <p className={styles.unanswered_warning}>
         {" "}
         {showUnansweredWarning &&
           `The following questions are unanswered: ${unAnsweredQues} You must answer all questions.`}{" "}
       </p>
 
       {!submitted ? (
-        <button className="submit exam_btn" onClick={submitAnswers}>
+        <button className={`${styles.submit} ${styles.exam_btn}`} onClick={submitAnswers}>
           Submit{" "}
         </button>
       ) : (
         <>
-          <p className="score_res_p">
+          <p className={styles.score_res_p}>
             {" "}
             Your score is {score} out of {shuffled.length}. You can now review
             your answers
           </p>
-          <button className="attempt-exam exam_btn" onClick={ () => window.location.reload() }>Close Review</button>
+          <button className={`${styles.attempt_exam} ${styles.exam_btn}`} onClick={ () => window.location.reload() }>Close Review</button>
         </>
       )}
 
