@@ -11,7 +11,7 @@
   /* --border-color-lightgray: #1a181442 solid 1px; */
   --border-color-lightgray-global: rgba(0, 0, 0, 0.331) solid 1px;
   --margin-top-from-header: 50px;
-  --phone-padding-sides: 1rem;
+  --phone-padding-sides: 16px;
 
   --font-size-H1: clamp(1.75rem, 3vw, 3rem);
   --font-size-H2: clamp(1.5rem, 3vw, 2.5rem);

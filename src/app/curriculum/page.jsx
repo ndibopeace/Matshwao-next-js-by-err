@@ -1,13 +1,13 @@
-import './Curriculum.css'
+import styles from'./curriculum.module.css'
 import Link from 'next/link'
 
 export default function Curriculum() {
 
     return (
-        <>
-            <title>Topics</title>
-            <h2 id='curriculum-heading'>Curriculum: </h2>
-            <div className='curriculum-container'>
+        <div className={styles.main_container}>
+            {/* <title>Topics</title> */}
+            <h1 id= {styles.curriculum_heading} >Curriculum: </h1>
+            <div className={ styles.curriculum_container} >
                 <div><Link href='/theory/personal-requirements'>Personal requirements: fitness to drive</Link></div>
                 <div><Link href='#'>Driver personality(reaction to risks)</Link></div>
                 <div><Link href='#'>Statutory regulations</Link></div>
@@ -24,6 +24,6 @@ export default function Curriculum() {
                 <div><Link href='#'>Using motor vehicles in an environmentall sensitive manner/Driving with single motor vehicles and combinations of vehicles </Link></div>
             </div>
             
-        </>
+        </div>
     )
 }
