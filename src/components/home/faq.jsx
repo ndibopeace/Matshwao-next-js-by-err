@@ -3,6 +3,7 @@ import styles from "./styles/faq.module.css";
 function FrequentlyAskedQuestions() {
   return (
     <>
+    <></>
       <section className={styles.faq} id={styles.faq}>
         <div className={styles.container}>
           <h2>Frequently Asked Questions</h2>

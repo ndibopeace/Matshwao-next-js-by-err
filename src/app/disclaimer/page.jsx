@@ -1,14 +1,19 @@
-import "./disclaimer.css"
+// import "./disclaimer.css"
+import styles from "../about/footer_links.module.css"
+
+// import styles from "../about/footer_links.module.css"
+// className={styles.main_container}
 
 export default function Disclaimer() {
   return (
-    <>
+    <div className={styles.main_container}>
+
       <div className="disclaimer-header-cont">
-        <h1>Disclaimer</h1>
-        <p>Last updated: 4 August 2026</p>
+        <h1 >Disclaimer</h1>
+        <p className= {styles.last_updated} >Last updated: 4 August 2026</p>
       </div>
 
-      <div className="disclaimer-text-cont">
+      <div className={`${styles.first_sub_cont} ${styles.disclaimer_text_cont}`}>
         <p>
         This website provides free educational material to help learners study
         Botswana road and driving theory. Its lessons, practice quizzes,
@@ -62,6 +67,6 @@ export default function Disclaimer() {
       </div>
 
       
-    </>
+    </div>
   );
 }

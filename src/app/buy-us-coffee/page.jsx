@@ -1,22 +1,29 @@
-import "./buy-us-coffee.css";
+// import "./buy-us-coffee.css";
+
+import styles from "../about/footer_links.module.css";
+// import styles from "../about/footer_links.module.css"
+// className={styles.main_container}
 
 export default function BuyUsCoffee() {
   return (
-    <div className="donate-cont">
+    <div className={styles.main_container}>
       <h1>Buy Us Coffee</h1>
 
-      <p className="donate-intro-txt">
-        This website is free to use because we believe every learner should have
-        access to clear, practical road-theory resources.
-      </p>
-      <p className="donate-intro-txt">
-        If the lessons and quizzes have helped you prepare for your theory test,
-        you can support the work with a small contribution. Every contribution
-        helps us keep the website free, improve existing lessons, add practice
-        questions, and create new learning resources.
-      </p>
+      <div className={`${styles.first_sub_cont} ${styles.sub_cont}`}>
+        <p>
+          This website is free to use because we believe every learner should
+          have access to clear, practical road-theory resources.
+        </p>
 
-      <div className="donate-sub-cont">
+        <p>
+          If the lessons and quizzes have helped you prepare for your theory
+          test, you can support the work with a small contribution. Every
+          contribution helps us keep the website free, improve existing lessons,
+          add practice questions, and create new learning resources.
+        </p>
+      </div>
+
+      <div className={styles.sub_cont}>
         <h2>Your support can help with</h2>
         <ul>
           <li>keeping the website available and up to date;</li>
@@ -26,23 +33,23 @@ export default function BuyUsCoffee() {
         </ul>
       </div>
 
-      <div className="donate-sub-cont whatsApp">
+      <div className={styles.sub_cont}>
         <h2>How to contribute</h2>
         <p>
           To make a contribution, send us a message on WhatsApp and we will
           share the payment details with you.
         </p>
         <p>
-          <strong>
-            Message us on WhatsApp 
+          <>
+            Message us on WhatsApp
             <a
               href="https://wa.me/26771111111?text=Hello%2C%20I%20would%20like%20to%20support%20the%20website."
               target="_blank"
               rel="noreferrer"
             >
-              : Click here
+              : <span> Click here</span>
             </a>
-          </strong>
+          </>
         </p>
         <p>
           Contributions are completely optional. You can continue using all
