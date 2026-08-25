@@ -1,7 +1,7 @@
 import Aside from '@components/reUsable/sidebar';
-import styles from './theory.module.css';
+import styles from './theoryLayout.module.css';
 
-import Lesson1 from './personal-requirements/page';
+// import Lesson1 from './personal-requirements/page';
 // for some reason i dont know, other lessons automatically import. 
 // All i need is to import this 1 lesson
 

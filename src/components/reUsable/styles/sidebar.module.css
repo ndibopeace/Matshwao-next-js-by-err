@@ -4,17 +4,17 @@
 
 .side_container_desktop {
   /* background-color: rgba(0, 0, 0, 0.054); */
-  width: clamp(10rem, 30vw,15rem);
+  width: clamp(200px, 30vw, 240px);
   height: 90vh;
   overflow-y: auto;
   scrollbar-width: thin;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 8px;
   position: sticky;
   top: 0;
 
-  /* border: red solid 1px; */
+  /* border: blue solid 1px; */
   padding-top: 65px;
 }
 
@@ -24,21 +24,13 @@
 }
 
 .side_container_desktop li {
-  border-bottom: solid 1px grey;
+  border-bottom: solid 1px var(--border-color-global);
   list-style-type: none;
 }
 .side_container_desktop ul {
   display: flex;
   flex-direction: column;
-  row-gap: 0.5rem;
-
-}
-
-.notes_container {
-  width: 100%;
-  height: 60vh;
-  overflow-y: auto;
-  padding: 1.25rem;
+  row-gap: 8px;
 }
 
 .active_topic {
@@ -52,7 +44,7 @@
     display: flex;
     align-items: center;
     position: fixed;
-    top: var(--margin-top-from-header);
+    top: var(--header-height);
     left: 0;
     width: 100%;
     padding-block: 10px;
@@ -79,12 +71,11 @@
     background-color: white;
     width: 100%;
     height: 100vh;
-    top: calc(var(--margin-top-from-header)*1.79);
-    /* border: solid; */
+    top: calc(var(--header-height) * 1.79);
     padding-top: 15px;
   }
 
   .side_container_mobile h2 {
-  display: none;
-}
+    display: none;
+  }
 }

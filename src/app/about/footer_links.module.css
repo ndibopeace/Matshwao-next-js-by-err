@@ -6,49 +6,27 @@
 }
 
 .main_container {
-  margin-top: var(--margin-top-from-header);
-  width: clamp(5rem, 100%, 750px);
+  width: clamp(200px, 100%, 750px);
   margin-inline: auto;
   font-size: 1.1rem;
 
-  border: red solid 1px;
-  border: transparent solid 1px;
-}
-
-.main_container h1 {
-  font-size: var(--font-size-H1);
-  margin-top: clamp(16px, 5vw, 32px);
-
-  text-align: center;
-  /* border: red solid 1px; */
+  /* border: red solid 1px;
+  border: transparent solid 1px; */
 }
 
 .last_updated {
   font-style: italic;
   font-size: 0.85rem;
   margin-top: clamp(16px, 5vw, 25px);
-  /* text-align: center; */
-  /* border: red solid 1px; */
 }
-
 
 .form {
-    /* border: red solid 1px; */
-    width: clamp(200px, 80%, 550px);
-    /* height: auto; */
-    margin-inline: auto;
-    margin-bottom: clamp(35px, 6vw ,120px);
-    margin-top: clamp(20px, 5vw ,60px);
-    
-
+  /* border: red solid 1px; */
+  width: clamp(200px, 80%, 550px);
+  margin-inline: auto;
+  margin-bottom: clamp(35px, 6vw, 120px);
+  margin-top: clamp(20px, 5vw, 60px);
 }
-.form iframe {
-    /* border: transparent solid 1px; */
-    /* background-color: #0cda42; */
-    /* overflow: hidden; */
-
-}
-
 
 .first_sub_cont {
   margin-top: clamp(10px, 3vw, 25px);
@@ -58,18 +36,14 @@
 
 .sub_cont {
   margin-bottom: clamp(10px, 3vw, 32px);
-
-  /* display: flex;
-  flex-direction: column; */
-  /* row-gap: 1rem; */
-  /* border: red solid 1px; */
 }
+
 .sub_cont p {
   margin-bottom: var(--paragraphs-margin-bottom);
 }
+
 .sub_cont h2 {
-  margin-bottom: var(--h2-margin-bottom);
-  font-size: var(--font-size-H2);
+  /* margin-bottom: var(--h2-margin-bottom); */
 }
 
 .sub_cont ul {
@@ -91,7 +65,8 @@
 .disclaimer_text_cont {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
+  flex-flow: row wrap;
   gap: var(--paragraphs-margin-bottom);
   margin-bottom: clamp(10px, 5vw, 50px);
 
@@ -99,16 +74,11 @@
 }
 
 @media (max-width: 480px) {
-  .main_container {
-    padding-inline: var(--phone-padding-sides);
-  }
-
   .form {
     border: transparent solid 1px;
     width: clamp(200px, 100%, 550px);
     /* height: auto; */
     margin-inline: auto;
-    margin-bottom: clamp(20px, 5vw ,100px);
-
-}
+    margin-bottom: clamp(20px, 5vw, 100px);
+  }
 }

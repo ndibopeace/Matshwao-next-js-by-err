@@ -1,0 +1,15 @@
+.lesson_container {
+    display: flex;
+    gap: 16px;
+
+    /* border: solid 1px red; */
+}
+
+
+
+@media (max-width: 480px) {
+    .lesson_container {
+        margin-top: calc(var(--header-height)*0.80);
+        gap: 0;
+    }
+}

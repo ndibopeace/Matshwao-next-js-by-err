@@ -1,19 +1,17 @@
 /* ----------------------------------------------------------- ---------- HERO TEXT SEC ----------------------------------------------------------- ---------- */
 
 #hero_container {
+  /* border: solid red 1px; */
   width: 100%;
-  margin-top: var(--margin-top-from-header);
+  /* margin-top: var(--margin-top-from-header); */
 }
 
 .hero_text {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding-block: clamp(1rem, 15vw, 5rem);
-  /* border: saddlebrown solid 5px; */
-  /* align-items: baseline; */
+  padding-block: clamp(16px, 15vw, 80px);
 }
-
 
 .heroBadge {
   border: solid 1px #1a181442;
@@ -39,7 +37,6 @@
 
 #hero_container h1 {
   font-size: clamp(1.75rem, 6vw, 5.5rem);
-  /* font-size: 50px; */
 }
 
 .start_learning_btn {
@@ -52,40 +49,24 @@
 }
 /* ----------------------------------------------------------- ---------- HERO TEXT SEC END----------------------------------------------------------- ---------- */
 
-
-
 /* ----------------------------------------------------------- ---------- hero img ----------------------------------------------------------- ---------- */
 
 .hero_img_con {
   position: relative;
   z-index: -1;
-  /* top: 0px; */
   width: 80%;
-  /* height: 80vh; */
   margin-inline: auto;
   aspect-ratio: 2/1;
-  /* border: solid red 1px; */
 }
-
-
-
-
-
-
-
-
-
-
 
 /* ------------------------------------WHY CHOOSE US SECTION----------------------------------------- */
 
 .whyUs {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 0.9rem;
-  padding-block: clamp(1.5rem, 3vw, 7rem);
-  width: clamp(200px, 95vw, 1100px);
+  flex-flow: row wrap;
+  gap: 14.4px;
+  padding-block: clamp(24px, 3vw, 112px);
+  width: clamp(200px, 100%, 1100px);
   margin-inline: auto;
   padding-inline: 8px;
 }
@@ -95,8 +76,7 @@
   background-color: #fcfcfc;
   border-radius: 8px;
   border: #1a181442 solid 1px;
-  padding-inline: 0.7rem;
-  padding-block: 1.2rem;
+  padding: 19.2px 11.2px;
   text-align: left;
 }
 
@@ -113,7 +93,7 @@
 }
 
 .feature i {
-  font-size: 2.1rem;
+  font-size: 33.6px;
   color: #3695ff;
 }
 
@@ -123,7 +103,7 @@
 
 .chooseUs h2 {
   text-align: center;
-  margin-top: clamp(0.5rem, 10vw, 4rem);
+  margin-top: clamp(8px, 10vw, 64px);
 }
 
 /* ------------------------------------START LEARNING SEC----------------------------------------- */
@@ -131,13 +111,12 @@
 .startLearning {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
-  width: clamp(200px, 95vw, 1050px);
-  margin-inline: auto;
+  gap: 16px;
+  width: clamp(200px, 100%, 1050px);
+  margin: clamp(48px, 3vw, 112px) auto;
   justify-content: space-between;
   align-items: baseline;
-  padding: clamp(8px, 5vw, 1.8rem);
-  margin-block: clamp(3rem, 3vw, 7rem);
+  padding: clamp(8px, 5vw, 28.8px);
   border-radius: 8px;
   color: #1f1f1e;
 
@@ -152,23 +131,17 @@
 .startLearning .free p {
   font-size: 2rem;
   font-weight: bold;
-}
-
-.free {
-  width: 100%;
-  max-width: 290px;
-  min-width: 250px;
-  margin-right: 100px;
+  width: clamp(250px, 100%, 290px);
 }
 
 .noTrial p {
-  margin-bottom: 0.9rem;
+  margin-bottom: 14.4px;
 }
 
 .tryFreeBtn {
   background: #eaeaea;
-  color: var(--ink);
-  padding: 0.2rem 1rem;
+  /* color: var(--ink); */
+  padding: 3.2px 16px;
   border-radius: 10px;
   border: #1a181442 solid 1px;
   cursor: pointer;
@@ -185,13 +158,13 @@
   }
 
   .hero_text {
-  gap: 16px;
-  padding-block: clamp(1rem, 10vw, 3rem);
-}
+    gap: 16px;
+    padding-block: clamp(16px, 10vw, 48px);
+  }
 
-.hero_img_con {
-  width: 90%;
-  margin-inline: auto;
-  aspect-ratio: 1/1;
-}
+  .hero_img_con {
+    width: 90%;
+    margin-inline: auto;
+    aspect-ratio: 1/1;
+  }
 }

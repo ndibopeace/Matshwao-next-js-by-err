@@ -10,11 +10,11 @@
   /* final */
   /* --border-color-lightgray: #1a181442 solid 1px; */
   --border-color-lightgray-global: rgba(0, 0, 0, 0.331) solid 1px;
+  --border-color-global: rgba(0, 0, 0, 0.331);
   --margin-top-from-header: 50px;
+  --header-height: 50px;
   --phone-padding-sides: 16px;
 
-  --font-size-H1: clamp(1.75rem, 3vw, 3rem);
-  --font-size-H2: clamp(1.5rem, 3vw, 2.5rem);
   --font-size-H3: clamp(1.25rem, 3vw, 2rem);
   --font-size-H4: clamp(1.125rem, 3vw, 1.625rem);
   --font-size-H5: clamp(1rem, 3vw, 1.25rem);
@@ -39,18 +39,38 @@
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
+}
+
+.main {
+  flex-grow: 1;
 }
 
 body {
-  min-height: 100vh; /* trial*/
-
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family:
-    var(--font-googleSans), 
+    var(--font-googleSans),
     var(--font-roboto), 
     sans-serif, 
     system-ui;
   line-height: 1.19; /* trial*/
-  /* font-size: clamp(1rem, 2vw, 1.125rem); */
+  margin-top: var(--header-height);
+
+  /* border: rgb(0, 0, 255) solid 1px; */
+}
+
+h1 {
+  margin-top: clamp(16px, 5vw, 32px);
+  margin-inline: auto;
+  font-size: clamp(1.75rem, 3vw, 3rem);
+  text-align: center;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
 }
 
 a {
@@ -65,5 +85,14 @@ a:active {
 @media (max-width: 480px) {
   &::-webkit-scrollbar {
     display: none;
+  }
+
+  body {
+    padding-inline: 16px;
+  }
+}
+@media (min-width: 600px) {
+  body {
+    padding-inline: 16px;
   }
 }

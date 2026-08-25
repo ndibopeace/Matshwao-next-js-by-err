@@ -16,7 +16,7 @@ export default function Disclaimer() {
       <div className={`${styles.first_sub_cont} ${styles.disclaimer_text_cont}`}>
         <p>
         This website provides free educational material to help learners study
-        Botswana road and driving theory. Its lessons, practice quizzes,
+        Botswana road and driving theory. It&apos;s lessons, practice quizzes,
         explanations, and other resources are for general learning purposes
         only.
       </p>
@@ -61,8 +61,7 @@ export default function Disclaimer() {
 
       <p>
         By using this website, you accept this disclaimer. We may update it when
-        the website or relevant information changes, and the latest version will
-        be published on this page.
+        the website or relevant information changes.
       </p>
       </div>
 

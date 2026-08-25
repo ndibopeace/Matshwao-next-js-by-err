@@ -26,7 +26,7 @@
   justify-content: center;
   border-radius: 15px;
   padding: 4px 10px;
-  gap: 1rem;
+  gap: 16px;
 
 }
 
@@ -79,8 +79,6 @@
   .modal {
   padding: 10px;
   width: 100%;
-  /* blur-radius: 150px; */
-  text-align: center;
   margin-inline: var(--phone-padding-sides);
 }
 

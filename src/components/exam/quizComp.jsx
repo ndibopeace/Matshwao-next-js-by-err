@@ -172,6 +172,7 @@ export default function Quiz() {
 
   return (
     <div className={styles.main_container}>
+
       <h1 id={styles.quiz_title}>Road Theory Exam</h1>
       <p className={styles.quiz_instruction}>
         To pass this test, you need to correctly answer atleast 26/30 questions

@@ -2,7 +2,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 
-import ScrollTopBtn from "@components/reUsable/scrollTopBtn"
+import ScrollTopBtn from "@components/reUsable/scrollTopBtn";
 import Header from "@components/reUsable/header";
 import Footer from "@components/reUsable/footer";
 
@@ -22,11 +22,9 @@ const roboto = localFont({
   variable: "--font-roboto",
 });
 
-
-const googleSans = localFont(
-  {
-    src: [
-      {
+const googleSans = localFont({
+  src: [
+    {
       path: "../../public/fonts/googleSans/GoogleSans-VariableFont_GRAD,opsz,wght.ttf",
       weight: "100 900",
       style: "normal",
@@ -36,14 +34,9 @@ const googleSans = localFont(
       weight: "100 900",
       style: "italic",
     },
-    ],
-    variable: '--font-googleSans'
-  }
-)
-
-
-
-
+  ],
+  variable: "--font-googleSans",
+});
 
 /*
 const geistSans = Geist({
@@ -74,9 +67,11 @@ export default function RootLayout({ children }) {
       <body>
         <Header />
 
-        <ScrollTopBtn />
+        <main className="main">
+          <ScrollTopBtn />
 
-        {children}
+          {children}
+        </main>
 
         <Footer />
       </body>

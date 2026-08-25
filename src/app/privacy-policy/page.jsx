@@ -18,13 +18,13 @@ export default function PrivacyPolicy() {
         <p>
         If you require any more information or have any questions about our
         privacy policy, please feel free to contact us by email at
-        abuse@sshocean.com.
+        <strong style={{color: 'red'}}> placeholder@email.com</strong>.
       </p>
       
       <p>
-        At sshocean.com, the privacy of our visitors is of extreme importance to
+        At <strong style={{color: 'red'}}>infoErr</strong>, the privacy of our visitors is of extreme importance to
         us. This privacy policy document outlines the types of personal
-        information received and collected by sshocean.com and how it is used.
+        information received and collected by <strong style={{color: 'red'}}>infoErr</strong> and how it is used.
       </p>
       </div>
 
@@ -95,7 +95,7 @@ export default function PrivacyPolicy() {
         <p>
           You can choose not to contact us or provide personal information. You
           may ask us to access, correct, or delete personal information you have
-          sent us, where applicable, by contacting us at [your email address].
+          sent us, where applicable, by contacting us at <strong style={{color: 'red'}}>placeholder@email.com</strong>.
         </p>
       </div>
 
@@ -107,10 +107,11 @@ export default function PrivacyPolicy() {
         </p>
       </div>
 
-      <div className={styles.sub_cont}>
+      {/* <div className={styles.sub_cont}>
         <h2>Contact</h2>
+        [1,5,8]
         <p>For privacy questions, contact us at [your email address].</p>
-      </div>
+      </div> */}
     </div>
   );
 }
