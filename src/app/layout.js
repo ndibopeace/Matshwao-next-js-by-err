@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 import ScrollTopBtn from "@components/reUsable/scrollTopBtn";
+import SkipToMainContent from "@/components/reUsable/skipToMainContent";
 import Header from "@components/reUsable/header";
 import Footer from "@components/reUsable/footer";
 
@@ -65,14 +66,12 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
+        <SkipToMainContent />
         <Header />
-
-        <main className="main">
+        <main className="main" id="main_content">
           <ScrollTopBtn />
-
           {children}
         </main>
-
         <Footer />
       </body>
     </html>

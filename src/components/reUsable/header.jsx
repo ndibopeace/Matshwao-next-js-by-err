@@ -9,9 +9,9 @@ export default function Navbar() {
     <>
       <header className={styles.header}>
         <nav aria-label="Primary navigation" className={styles.headerLinks}>
-          <a className={styles.logo} href="#">
-            <span id="back-top">logo</span>err
-          </a>
+          <Link className={styles.logo} href="/">
+            <span>logo</span>err
+          </Link>
 
           <ul className={styles.navlinks}>
             <li>

@@ -6,11 +6,12 @@ export default function Hero() {
   return (
     <>
       <section id={`${styles.hero_container}`}>
-
         <div className={styles.hero_text}>
           <p className={styles.heroBadge}>LETS DRIVE SAFELY</p>
 
-          <p className={styles.hero_child_text}>Featured Path: Class B License</p>
+          <p className={styles.hero_child_text}>
+            Featured Path: Class B License
+          </p>
 
           <h1>Don&apos;t spend 15K on a Learning bootcamp</h1>
           <p className={styles.hero_child_text}>
@@ -29,8 +30,15 @@ export default function Hero() {
         </div>
 
         <div className={styles.hero_img_con}>
-            <Image src="/assets/images/hero.webp" alt="hero image" priority fill className={styles.hero_img} />
-          </div>
+          <Image
+            aria-hidden="true"
+            src="/assets/images/hero.webp"
+            alt=""
+            priority
+            fill
+            className={styles.hero_img}
+          />
+        </div>
       </section>
 
       <section className={`${styles.chooseUs}`}>
@@ -39,7 +47,7 @@ export default function Hero() {
         <div className={styles.whyUs}>
           <div className={styles.feature}>
             <div className={styles.iconCon}>
-              <i className="fas fa-book"></i>
+              <i aria-hidden="true" className="fas fa-book"></i>
             </div>
             <h3>It&apos;s free to learn</h3>
             <p>
@@ -50,7 +58,7 @@ export default function Hero() {
 
           <div className={styles.feature}>
             <div className={styles.iconCon}>
-              <i className="fas fa-question-circle"></i>
+              <i aria-hidden="true" className="fas fa-question-circle"></i>
             </div>
             <h3>Practice quizzes</h3>
             <p>
@@ -62,7 +70,7 @@ export default function Hero() {
 
           <div className={styles.feature}>
             <div className={styles.iconCon}>
-              <i className="fas fa-chart-line"></i>
+              <i aria-hidden="true" className="fas fa-chart-line"></i>
             </div>
             <h3>Progress tracking</h3>
             <p>
@@ -72,7 +80,7 @@ export default function Hero() {
 
           <div className={styles.feature}>
             <div className={styles.iconCon}>
-              <i className="fas fa-mobile-alt"></i>
+              <i aria-hidden="true" className="fas fa-mobile-alt"></i>
             </div>
             <h3>Mobile-Friendly</h3>
             <p>
