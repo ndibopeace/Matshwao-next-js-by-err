@@ -2,6 +2,12 @@
 
 import styles from "../about/footer_links.module.css"
 
+export const metadata = {
+  title: "Privacy policy",
+  description:
+    "Read how err handles personal information and privacy when you use our driving theory learning resources.",
+};
+
 
 export default function PrivacyPolicy() {
   return (

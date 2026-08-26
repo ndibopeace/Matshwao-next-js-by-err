@@ -1,6 +1,17 @@
 // import "./contactUs.css"
 import styles from "../about/footer_links.module.css";
 
+
+export const metadata = {
+  title: "Contact us",
+  description:
+    "Contact us with questions, feedback, corrections, or suggestions for our Botswana driving theory resources.",
+};
+
+
+
+
+
 export default function ContactUs() {
   return (
     <div className={styles.main_container}>

@@ -1,5 +1,11 @@
 // import "./buy-us-coffee.css";
 
+export const metadata = {
+  title: "Buy us coffee",
+  description:
+    "Support err and help keep Botswana driving theory lessons and practice quizzes free.",
+};
+
 import styles from "../about/footer_links.module.css";
 // import styles from "../about/footer_links.module.css"
 // className={styles.main_container}
@@ -39,17 +45,16 @@ export default function BuyUsCoffee() {
           To make a contribution, send us a message on WhatsApp and we will
           share the payment details with you.
         </p>
-        <p>
-          <>
-            Message us on WhatsApp
+
+
+        <p> 
             <a
               href="https://wa.me/26771111111?text=Hello%2C%20I%20would%20like%20to%20support%20the%20website."
               target="_blank"
               rel="noreferrer"
             >
-              : <span> Click here</span>
-            </a>
-          </>
+               Message us on <span>WhatsApp</span>
+            </a>          
         </p>
         <p>
           Contributions are completely optional. You can continue using all

@@ -1,6 +1,12 @@
 // import "./disclaimer.css"
 import styles from "../about/footer_links.module.css"
 
+export const metadata = {
+  title: "Disclaimer",
+  description:
+    "Read the disclaimer for err’s Botswana driving theory learning resources.",
+};
+
 // import styles from "../about/footer_links.module.css"
 // className={styles.main_container}
 
@@ -16,7 +22,7 @@ export default function Disclaimer() {
       <div className={`${styles.first_sub_cont} ${styles.disclaimer_text_cont}`}>
         <p>
         This website provides free educational material to help learners study
-        Botswana road and driving theory. It&apos;s lessons, practice quizzes,
+        Botswana road and driving theory. Its lessons, practice quizzes,
         explanations, and other resources are for general learning purposes
         only.
       </p>

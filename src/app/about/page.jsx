@@ -1,6 +1,13 @@
 // import "./about.css"
 import styles from "./footer_links.module.css";
 
+export const metadata = {
+  title: "About",
+  description: 
+  "Learn about err, a free study resource for Botswana driving theory."
+}
+
+
 export default function About() {
   return (
     <div className={styles.main_container}>
