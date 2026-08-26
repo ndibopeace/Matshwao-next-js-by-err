@@ -1,0 +1,36 @@
+.button {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  padding: 8.5px;
+}
+
+.menu_btn {
+  gap: 8px;
+}
+
+.button:active {
+  background-color: lightblue;
+  /* transition: background-color 0.2s ease-in; */
+}
+
+.lines {
+  outline: black solid 1px;
+  width: 100%;
+  transition: ease-in-out 0.4s;
+}
+
+.line1 {
+  transform: rotate(45deg);
+  transition: ease-in-out 0.4s;
+}
+
+.line2 {
+  transform: rotate(-45deg);
+  transition: ease-in-out 0.4s;
+}

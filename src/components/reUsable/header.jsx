@@ -1,10 +1,16 @@
-import styles from "./styles/header.module.css";
-import HamburgerMenu from "./hamMenu";
+"use client";
+import { usePathname } from "next/navigation";
 
+import styles from "./styles/header.module.css";
+import HamburgerMenu from "./MobileNavMenu";
 
 import Link from "next/link";
 
-export default function Navbar() { 
+export default function Navbar() {
+  const pathname = usePathname();
+
+  console.log(pathname);
+
   return (
     <>
       <header className={styles.header}>
@@ -15,27 +21,46 @@ export default function Navbar() {
 
           <ul className={styles.navlinks}>
             <li>
-              <Link className={styles.active} href="/">
+              <Link
+                href="/"
+                className={pathname === "/" ? styles.active : ""}
+                aria-current={pathname === "/" ? "page" : undefined}
+              >
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/theory/">Notes</Link>
+              <Link
+                className={pathname === "/theory" ? styles.active : ""}
+                aria-current={pathname === "/theory" ? "page" : undefined}
+                href="/theory/"
+              >
+                Notes
+              </Link>
             </li>
             <li>
-              <Link href="/exam">Exam</Link>
+              <Link
+                href="/exam"
+                className={pathname === "/exam" ? styles.active : ""}
+                aria-current={pathname === "/exam" ? "page" : undefined}
+              >
+                Exam
+              </Link>
             </li>
             <li>
-              <Link href="/frequently-asked-questions">FAQs</Link>
+              <Link
+                href="/frequently-asked-questions"
+                className={pathname === "/frequently-asked-questions" ? styles.active : ""}
+                aria-current={pathname === "/frequently-asked-questions" ? "page" : undefined}
+              >
+                FAQs
+              </Link>
             </li>
-            
           </ul>
 
           <div className={styles.menuIcon}>
             <HamburgerMenu />
           </div>
-              
-            
         </nav>
       </header>
     </>

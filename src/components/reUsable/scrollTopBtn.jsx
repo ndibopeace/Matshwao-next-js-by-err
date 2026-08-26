@@ -2,10 +2,7 @@
 
 import { useEffect, useState } from "react";
 import styles from "./styles/scrollTopBtn.module.css";
-
-
 import { IoIosArrowDropupCircle } from "react-icons/io";
-
 
 export default function ScrollTopBtn() {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,21 +20,20 @@ export default function ScrollTopBtn() {
 
   let scrollToTopFx = () => {
     console.log("I went back to the top");
-    window.scrollTo({top: 0, behavior: "smooth"})
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <div>
-
       {isVisible && (
-        <button onClick={scrollToTopFx} className={styles.scrollTopBtn}>
-          {/* <IoIosArrowUp size={"3rem"} color="" /> */}
-                <IoIosArrowDropupCircle   size={"3rem"} color="" />
-
+        <button
+          aria-label="scroll to top"
+          onClick={scrollToTopFx}
+          className={styles.scrollTopBtn}
+        >
+          <IoIosArrowDropupCircle className={styles.icon} />
         </button>
       )}
     </div>
   );
 }
-
- 

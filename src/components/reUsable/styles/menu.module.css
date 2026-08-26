@@ -1,50 +1,38 @@
-
-
-/*.mainContainer {
-    position: relative;
-}*/
-
 .menuCon {
-    position: absolute;
-    /* left: 80%; */
-    right: 0%;
-    top: 76;
-    background-color: rgb(255, 255, 255);
-    width: 100%;
-    /*height: 100vh;*/
-    padding: 1.5rem;
-    /*font-size: 1.2rem;*/
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: var(--header-height);
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  padding: 1.5rem;
 }
 
-
 .menuCon .internalNavLinks {
-    display: flex;
-    flex-direction: column;
-    row-gap: 0.4rem;
-    /*font-size: 1rem;*/
-    list-style: none;
-    /* margin-top: 35px; */
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.4rem;
+  list-style: none;
 }
 
 .linkIitem {
-    border-bottom: var(--border-color-lightgray);
+  border-bottom: var(--border-color-lightgray);
 }
 
 .menuIcon {
-    /* position: relative; */
-    z-index: 10000;
+  z-index: 10000;
 }
 
 .mobileMenuSocialLinks {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 0.4rem;
-    margin: 50px 0;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0.4rem;
+  margin: 50px 0;
 }
 .mobileMenuSocialLinks ul {
-    display: flex;
-    flex-direction: row;
-    column-gap: 0.6rem;
+  display: flex;
+  flex-direction: row;
+  column-gap: 0.6rem;
+  list-style-type: none;
 }

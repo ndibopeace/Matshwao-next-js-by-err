@@ -5,6 +5,7 @@
 .headerLinks {
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 100;
   width: 100%;
   height: var(--margin-top-from-header);
@@ -36,17 +37,16 @@
   white-space: nowrap;
 }
 
-.navlinks a:hover,
-.nav-links a:focus-visible {
+.navlinks a:hover {
   color: var(--accent);
   background: var(--surface);
   border-color: var(--line);
 }
 
 .navlinks a.active {
-  background: var(--ink);
-  color: var(--bg);
-  border-color: var(--ink);
+  background: rgb(255, 255, 255);
+  /* color: blue; */
+  border-bottom: solid black 2px;
 }
 
 .logo {

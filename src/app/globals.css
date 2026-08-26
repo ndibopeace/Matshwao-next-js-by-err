@@ -51,11 +51,8 @@ body {
   flex-direction: column;
   min-height: 100vh;
   font-family:
-    var(--font-googleSans),
-    var(--font-roboto), 
-    sans-serif, 
-    system-ui;
-  line-height: 1.19; /* trial*/
+    var(--font-googleSans), var(--font-roboto), sans-serif, system-ui;
+  line-height: 1.5; /* trial*/
   margin-top: var(--header-height);
 
   /* border: rgb(0, 0, 255) solid 1px; */
@@ -81,6 +78,12 @@ a {
 a:active {
   color: red;
 }
+
+:is(button, a, summary):focus-visible {
+  outline: solid blue 3px;
+}
+
+
 
 @media (max-width: 480px) {
   &::-webkit-scrollbar {

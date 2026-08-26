@@ -68,11 +68,11 @@ export default function RootLayout({ children }) {
       <body>
         <SkipToMainContent />
         <Header />
-        <main className="main" id="main_content">
-          <ScrollTopBtn />
+        <main className="main" id="main_content" tabIndex="-1">          
           {children}
         </main>
         <Footer />
+        <ScrollTopBtn />  
       </body>
     </html>
   );
