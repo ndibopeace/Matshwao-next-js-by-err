@@ -1,8 +1,6 @@
 "use client";
 
-// import { useRouter } from "next/navigation";
 import styles from "./quiz.module.css"
-
 import { useState } from "react";
 import Image from "next/image";
 import ResultMessage from "./result_message";
@@ -46,7 +44,7 @@ export default function Quiz() {
   let [score, setScore] = useState(0);
 
   let [shuffled /*setShuffled*/] = useState(
-    getQuizQuestions(quizQuestions, 1),
+    getQuizQuestions(quizQuestions, 30),
   );
 
   let [selectedAnswers, setSelectedAnswers] = useState(
@@ -117,6 +115,7 @@ export default function Quiz() {
     setSelectedAnswers(selectedAnswersCopy);
   }
 
+
   let unAnsweredQues = selectedAnswers.reduce((acc, answer, i) => {
     // checks for indexes of unanswerd questions when submitting
 
@@ -130,7 +129,7 @@ export default function Quiz() {
     setHasTriedToSubmit(true);
 
     if (unAnsweredQues.length > 0) {
-      console.log("please answer all the questions");
+      // console.log("please answer all the questions");
       return;
     }
 
@@ -181,6 +180,7 @@ export default function Quiz() {
 
       <div className={styles.q_container}>
         {shuffled.map(({ question, options, key, image, correctOption }, i) => {
+          
           return (
             <div className={styles.q_card} key={key}>
               <p className={styles.q_text}>

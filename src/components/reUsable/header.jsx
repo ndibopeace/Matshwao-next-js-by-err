@@ -31,13 +31,14 @@ export default function Navbar() {
             </li>
             <li>
               <Link
-                className={pathname === "/theory" ? styles.active : ""}
+                className={(pathname === "/theory" || pathname.startsWith("/theory/")) ? styles.active : ""}
                 aria-current={pathname === "/theory" ? "page" : undefined}
                 href="/theory/"
               >
                 Notes
               </Link>
             </li>
+
             <li>
               <Link
                 href="/exam"
@@ -47,6 +48,7 @@ export default function Navbar() {
                 Exam
               </Link>
             </li>
+
             <li>
               <Link
                 href="/frequently-asked-questions"
@@ -56,6 +58,19 @@ export default function Navbar() {
                 FAQs
               </Link>
             </li>
+
+
+            <li>
+              <Link
+                href="/how-it-works"
+                className={pathname === "/how-it-works" ? styles.active : ""}
+                aria-current={pathname === "/how-it-works" ? "page" : undefined}
+              >
+                How it works
+              </Link>
+            </li>
+
+
           </ul>
 
           <div className={styles.menuIcon}>

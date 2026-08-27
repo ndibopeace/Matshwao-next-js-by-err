@@ -16,7 +16,7 @@ export default function ResultMessage({
 
   let hasPassed;
 
-  if (score > 26 || percentage > 86.6) {
+  if (score > 25 || percentage > 86.6) {
     hasPassed = true;
   } else {
     hasPassed = false;

@@ -51,7 +51,10 @@ body {
   flex-direction: column;
   min-height: 100vh;
   font-family:
-    var(--font-googleSans), var(--font-roboto), sans-serif, system-ui;
+    /* var(--font-googleSans), */
+    var(--font-roboto), 
+    sans-serif, 
+    system-ui;
   line-height: 1.5; /* trial*/
   margin-top: var(--header-height);
 
@@ -68,6 +71,7 @@ h1 {
 
 h2 {
   font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 600;
 }
 
 a {

@@ -1,39 +1,73 @@
+import styles from "@/app/about/footer_links.module.css"
+
+export const metadata = {
+  title: 'How it works',
+  description: 'Learn how to best make use of our website and what to expect to make your learning fruitful'
+}
+
+
 export default function HowItWorks() {
   return (
-    <>
-      <div>
-        How It Works 1. Pick a Topic Browse categories like road signs,
-        right-of-way rules, and traffic laws to find what you want to study. 2.
-        Study the Notes This is where DriveReady is different — and it&apos;s worth
-        understanding how the notes work before you dive in. Each note is
-        written as a question followed by a list of answers (A, B, C...). At
-        first glance it looks like an exam question, but it isn&apos;t one. Every
-        answer listed is correct. These are all valid, true responses to that
-        question. Here&apos;s why: on the actual exam, you&apos;ll get a version of the
-        same question, but with only one correct answer mixed in among wrong
-        ones — and it might not even be one of the answers shown in the notes.
-        The notes are there to build your understanding of the topic, not to
-        give you an answer bank to memorize. Example: Q: What should you do when
-        approaching a pedestrian crossing? A. Slow down and be ready to stop B.
-        Give way to pedestrians already crossing C. Check your mirrors before
-        slowing down All three are correct here. But on the actual exam, this
-        question might show a completely different correct option — one that
-        isn&apos;t listed above at all.
-        
+    <div className={styles.main_container}>
+      <h1>How It Works</h1>
+
+      <div className={`${styles.first_sub_cont} ${styles.sub_cont}`}>
+        <h2>Pick a Topic</h2>
         <p>
-             Don&apos;t memorize — understand. Because the exam
-        can pull from correct answers beyond what&apos;s shown in the notes,
-        memorizing the ABC list won&apos;t be enough. Always read the question and
-        all the options carefully during practice and on exam day. Understanding
-        why an answer is correct is what will actually get you through. 3. Take
-        the Quiz Once you&apos;ve studied a topic, test yourself with quizzes that
-        mimic the real exam format — one correct answer among several options.
-        4. Get Instant Feedback See your score immediately, with explanations so
-        you understand why an answer is right, not just that it is. 5. Track
-        Your Progress Retake quizzes, watch your scores improve, and know when
-        you&apos;re ready for the real exam.
+          Browse categories like road signs, right-of-way rules, and traffic
+          laws to find what you want to study.
         </p>
       </div>
-    </>
+
+      <div className={styles.sub_cont}>
+        <h2>Study the Notes</h2>
+        <p>
+          This only applies to the notes section — and it&apos;s worth
+          understanding how the notes work before you dive in. Each note is
+          written as a question followed by a list of answers (A, B, C...). At
+          first glance it looks like an exam question and options to choose from, but it isn&apos;t one.
+          Every answer listed is correct. These are all valid, true responses to
+          that question. The exam will only pull one correct answer from the
+          notes together with wrong options from elsewhere.
+        </p>
+      </div>
+
+      <div className={styles.sub_cont}>
+        <h2>Read to understand!!!</h2>
+        <p>
+          {" "}
+          Don&apos;t memorize — understand. Because the real exam from DTRS can
+          pull from correct answers beyond what&apos;s shown in the notes,
+          memorizing the ABC list won&apos;t be enough. Always read the question
+          and all the options carefully during practice and on exam day.
+          Understanding why an answer is correct is what will actually get you
+          through.
+        </p>
+      </div>
+
+      <div className={styles.sub_cont}>
+        <h2>Test yourself</h2>
+        <p>
+          On the exam that we will test you with, you&apos;ll get a version of
+          the same question from the notes, but with only one correct answer
+          mixed in among wrong ones. The notes are there to build your
+          understanding of the topic, not to give you an answer bank to
+          memorize. It&apos;s worth noting that the real exam from DTRS may
+          differ in their approach.
+        </p>
+      </div>
+
+      <div className={styles.sub_cont}>
+        <h2>Get Instant Feedback</h2>
+        <p>
+          See your score immediately, with a review that highlights correct and incorrect answers.
+        </p>
+      </div>
+
+      {/* <div className={styles.sub_cont}>
+          <h2></h2>
+          <p></p>
+        </div> */}
+    </div>
   );
 }
