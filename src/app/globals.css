@@ -12,7 +12,7 @@
   --border-color-lightgray-global: rgba(0, 0, 0, 0.331) solid 1px;
   --border-color-global: rgba(0, 0, 0, 0.331);
   --margin-top-from-header: 50px;
-  --header-height: 50px;
+  --header-height: 60px;
   --phone-padding-sides: 16px;
 
   --font-size-H3: clamp(1.25rem, 3vw, 2rem);
@@ -52,9 +52,7 @@ body {
   min-height: 100vh;
   font-family:
     /* var(--font-googleSans), */
-    var(--font-roboto), 
-    sans-serif, 
-    system-ui;
+    var(--font-roboto), sans-serif, system-ui;
   line-height: 1.5; /* trial*/
   margin-top: var(--header-height);
 
@@ -86,8 +84,6 @@ a:active {
 :is(button, a, summary):focus-visible {
   outline: solid blue 3px;
 }
-
-
 
 @media (max-width: 480px) {
   &::-webkit-scrollbar {
