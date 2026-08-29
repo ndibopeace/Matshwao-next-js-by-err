@@ -1,4 +1,6 @@
 // import { Geist, Geist_Mono } from "next/font/google";
+
+import Script from "next/script";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -54,7 +56,8 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Matshwao101",
-  description: "Learn road license theory with structured notes, accessible quizzes, and exam preparation resources to help you succeed on your driving test.",
+  description:
+    "Learn road license theory with structured notes, accessible quizzes, and exam preparation resources to help you succeed on your driving test.",
 };
 
 export default function RootLayout({ children }) {
@@ -65,16 +68,25 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         />
+{/* microsoft tracking script */}
+        <Script type="text/javascript" id="clarity">
+          {`(function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "y9249ffl4l");
+`}
+        </Script>
       </head>
       <body>
         <SkipToMainContent />
         <Header />
-        <main className="main" id="main_content" tabIndex="-1">          
+        <main className="main" id="main_content" tabIndex="-1">
           {children}
         </main>
         <Footer />
         {/* <ScrollTopBtn />  */}
-        <ScrollProgress /> 
+        <ScrollProgress />
       </body>
     </html>
   );

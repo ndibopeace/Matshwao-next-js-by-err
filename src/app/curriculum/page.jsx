@@ -4,7 +4,12 @@ import Link from 'next/link'
 export const metadata = {
     title: 'Curriculum',
     description:
-  "Browse free Botswana driving theory lessons, including road signs, traffic rules, safe driving, and vehicle knowledge.",
+        "Browse free Botswana driving theory lessons, including road signs, traffic rules, safe driving, and vehicle knowledge.",
+
+    robots: {
+        index: false,
+        follow: true
+    }
 }
 
 export default function Curriculum() {

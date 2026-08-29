@@ -1,26 +1,16 @@
-"use client";
-import { useState } from "react";
-import Instructions from "@components/exam/instructions";
-import Quiz from "@components/exam/quizComp";
+import Quiz from "@/components/exam/quizPage";
 
-// export const metadata = {
-//   title: "Exam",
-//   robots: {
-//     index: false,
-//     follow: true
-//   }
-// }
+
+export const metadata = {
+  title: "Exam",
+  description: 'test yourself with our exam to check how well you understood theory concepts',
+  robots: {
+    index: false,
+    follow: true
+  }
+}
+
 
 export default function QuizPage() {
-  let [isExamOn, setIsExamOn] = useState(false);
-
-  return (
-    <>
-      {isExamOn ? (
-        <Quiz />
-      ) : (
-        <Instructions isExamOn={isExamOn} setIsExamOn={setIsExamOn} />
-      )}
-    </>
-  );
+  return <Quiz />;
 }
