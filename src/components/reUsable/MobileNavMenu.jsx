@@ -3,16 +3,48 @@ import { usePathname } from "next/navigation";
 import MenuIcon from "./menuIcon";
 
 // import Hamburger from "hamburger-react";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import styles from "./styles/menu.module.css";
 import { headerNavLinks } from "@/config";
 import Link from "next/link";
 import { SiFacebook, SiWhatsapp, SiTiktok, SiInstagram } from "react-icons/si";
 
 export default function HamburgerMenu() {
+
+   const [isMobile, setIsMobile] = useState(
+    ()=>{
+      if (typeof window === 'undefined') return false; // for server bcz window is client side only
+      return window.matchMedia('(max-width: 480px)').matches
+    }    
+  )
+
+  useEffect(()=>{
+
+    const mediaQueryMobile = window.matchMedia('(max-width: 480px)')
+    const isTrueFx = (e)=> setIsMobile(e.matches)
+    mediaQueryMobile.addEventListener('change', isTrueFx)
+
+
+    return ()=>mediaQueryMobile.removeEventListener('change' , isTrueFx)
+  },[])
+
+
+
+
+
   // const [isOpen, setIsOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname()
+
+  function closeMenu(e) {
+
+    if (e.target.closest('a')){
+      setIsMenuOpen(false)
+      console.log('heyyyyy')
+    }
+  }
+
+  
 
   return (
     <div className={styles.mainContainer}>
@@ -26,6 +58,7 @@ export default function HamburgerMenu() {
 
       {isMenuOpen && (
         <nav
+          onClick={isMobile ? closeMenu:undefined}
           id="menu"
           className={styles.menuCon}
           aria-label="Mobile navigation"

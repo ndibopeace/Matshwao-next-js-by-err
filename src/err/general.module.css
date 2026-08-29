@@ -38,3 +38,10 @@
     stroke-opacity: 1;
     transition: stroke 0.2s ease, stroke-opacity 0.2s ease;
 }
+
+@media (max-width: 480px) {
+    .scroll_btn {
+        /*top: 80%;*/
+        left: 87%;
+    }
+}

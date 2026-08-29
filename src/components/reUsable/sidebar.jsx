@@ -3,19 +3,56 @@
 import styles from "@components/reUsable/styles/sidebar.module.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
 
 export default function Aside() {
+
+  const [isMobile, setIsMobile] = useState(
+    ()=>{
+          if (typeof window === 'undefined') return false; // for server bcz window is client side only
+          return window.matchMedia('(max-width: 480px)').matches
+        }
+  )
+
+  useEffect(()=>{
+
+    const mediaQueryMobile = window.matchMedia('(max-width: 480px)')
+    const isTrueFx = (e)=> setIsMobile(e.matches)
+    mediaQueryMobile.addEventListener('change', isTrueFx)
+
+
+    return ()=>mediaQueryMobile.removeEventListener('change' , isTrueFx)
+  },[])
+
+
+
+
+
+
+
+
+
+
+
+
   function toggleMenu() {
     setIsMenuOpen(!isMenuOpen);
   }
 
+  function closeMenu(e) {
+    if (e.target.closest('a')){
+      setIsMenuOpen(false)
+      console.log('heyyy5yy')
+    }
+  }
+
+
   const pathName = usePathname(); //gets the current url
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  console.log(isMenuOpen);
+  // console.log(isMenuOpen);
 
   return (
     <div>
@@ -36,12 +73,13 @@ export default function Aside() {
       </button>
 
       <aside
+        onClick={isMobile ? closeMenu: undefined}
         className={`${styles.side_container_desktop} ${isMenuOpen ? styles.side_container_mobile : ""}`}
       >
         <h2>Lessons</h2>
 
         <nav id="lessons" aria-label="lessons navigation">
-          <ul>
+          <ul >
             <li>
               <Link
                 aria-current={

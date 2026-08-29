@@ -34,9 +34,16 @@ export function ScrollProgress() {
     };
   }, []);
 
+  let scrollToTopFx = () => {
+    console.log("I went back to the top");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+
   return (
     <>
      {isVisible && <button
+       onClick={scrollToTopFx}
         type="button"
         aria-label="Scroll to top"
         className={styles.scroll_btn}
