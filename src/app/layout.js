@@ -58,13 +58,16 @@ export const metadata = {
   title: "Matshwao101",
   description:
     "Learn road license theory with structured notes, accessible quizzes, and exam preparation resources to help you succeed on your driving test.",
+    verification: {
+      google: "TB1GVEFquQXCOeDRNy1PfhHkEf2iiTARMDvRp1caGYw",
+    }
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${roboto.variable} ${googleSans.variable}`}>
       <head>
-        <meta name='google-site-verification' content='TB1GVEFquQXCOeDRNy1PfhHkEf2iiTARMDvRp1caGYw' />
+        {/* // <meta name='google-site-verification' content='TB1GVEFquQXCOeDRNy1PfhHkEf2iiTARMDvRp1caGYw' /> */}
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
