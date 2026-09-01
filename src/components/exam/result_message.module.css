@@ -55,11 +55,11 @@
   display: none;
 }
 
-.buttons {
+/* .buttons {
   display: flex;
   justify-content: space-around;
   margin-top: 15px;
-}
+} */
 
 .review_btn {
     padding: 5px 10px;

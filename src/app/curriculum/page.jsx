@@ -16,8 +16,7 @@ export default function Curriculum() {
 
     return (
         <div className={styles.main_container}>
-            {/* <title>Topics</title> */}
-            <h1 id= {styles.curriculum_heading} >Curriculum </h1>
+            <h1>Curriculum </h1>
             <ul className={ styles.curriculum_container} >
                 <li><Link href='/theory/personal-requirements'>Personal requirements: fitness to drive</Link></li>
                 <li><Link href='/theory/driver-personality'>Driver personality (reaction to risks)</Link></li>

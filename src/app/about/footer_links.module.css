@@ -9,9 +9,6 @@
   width: clamp(200px, 100%, 750px);
   margin-inline: auto;
   font-size: 1.1rem;
-
-  /* border: red solid 1px;
-  border: transparent solid 1px; */
 }
 
 .last_updated {
@@ -21,7 +18,6 @@
 }
 
 .form {
-  /* border: red solid 1px; */
   width: clamp(200px, 80%, 550px);
   margin-inline: auto;
   margin-bottom: clamp(35px, 6vw, 120px);
@@ -30,8 +26,6 @@
 
 .first_sub_cont {
   margin-top: clamp(10px, 3vw, 25px);
-
-  /* border: solid 1px red; */
 }
 
 .sub_cont {
@@ -42,42 +36,28 @@
   margin-bottom: var(--paragraphs-margin-bottom);
 }
 
-.sub_cont h2 {
-  /* margin-bottom: var(--h2-margin-bottom); */
-}
-
 .sub_cont ul {
   margin-left: clamp(10px, 5vw, 30px);
   margin-bottom: 16px;
-  /* list-style-type: none; */
-
-  /* border: solid; */
 }
+
 .sub_cont span {
   border-bottom: solid #0cda42 3px;
 }
 
-/* 
-
-
-*/
 
 .disclaimer_text_cont {
   display: flex;
   justify-content: center;
-  /* flex-wrap: wrap; */
   flex-flow: row wrap;
   gap: var(--paragraphs-margin-bottom);
   margin-bottom: clamp(10px, 5vw, 50px);
-
-  /* border: red solid 1px; */
 }
 
 @media (max-width: 480px) {
   .form {
     border: transparent solid 1px;
     width: clamp(200px, 100%, 550px);
-    /* height: auto; */
     margin-inline: auto;
     margin-bottom: clamp(20px, 5vw, 100px);
   }

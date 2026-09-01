@@ -11,7 +11,7 @@ export default function QuizPage() {
       {isExamOn ? (
         <Quiz />
       ) : (
-        <Instructions isExamOn={isExamOn} setIsExamOn={setIsExamOn} />
+        <Instructions setIsExamOn={setIsExamOn} />
       )}
     </>
   );
