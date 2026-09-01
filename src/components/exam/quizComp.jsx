@@ -1,4 +1,5 @@
 "use client";
+import Timer from "@/err/timer";
 
 import styles from "./quiz.module.css"
 import { useState } from "react";
@@ -129,7 +130,6 @@ export default function Quiz() {
     setHasTriedToSubmit(true);
 
     if (unAnsweredQues.length > 0) {
-      // console.log("please answer all the questions");
       return;
     }
 
@@ -159,12 +159,13 @@ export default function Quiz() {
     let n = 0;
 
     selectedAnswers.map((answer, i) => {
-      // console.log(selectedAnswers);
+      
 
       if (answer === shuffled[i].correctOption) {
         n = n + 1;
       }
     });
+
 
     setScore(n);
   }
@@ -173,6 +174,16 @@ export default function Quiz() {
     <div className={styles.main_container}>
 
       <h1 id={styles.quiz_title}>Road Theory Exam</h1>
+
+      {!submitted && <Timer
+        setSubmitted={setSubmitted}
+        setShowResultScreen={setShowResultScreen}
+        getMarks={getMarks}
+      />}
+
+
+
+
       <p className={styles.quiz_instruction}>
         To pass this test, you need to correctly answer atleast 26/30 questions
         or get 87%.
@@ -231,7 +242,6 @@ export default function Quiz() {
                         ? styles.correct
                         : styles.wrong;
 
-                  // console.log(selectedAnswers[i]);
                   let g =
                     submitted &&
                     selectedAnswers[i] !== null &&
@@ -264,7 +274,7 @@ export default function Quiz() {
 
       {!submitted ? (
         <button className={`${styles.submit} ${styles.exam_btn}`} onClick={submitAnswers}>
-          Submit{" "}
+          Submit
         </button>
       ) : (
         <>
