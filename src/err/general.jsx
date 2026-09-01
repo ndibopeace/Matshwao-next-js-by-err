@@ -1,10 +1,9 @@
-// menu, srollTop, button,
+// scroll to the top btn with scroll progress
 "use client";
 import { useState, useEffect } from "react";
-// import ReactDOM from "react-dom/client";
 import styles from "@/err/general.module.css";
 
-export function ScrollProgress() {
+export function ScrollTop() {
   const [progress, setProgress] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -35,7 +34,6 @@ export function ScrollProgress() {
   }, []);
 
   let scrollToTopFx = () => {
-    console.log("I went back to the top");
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 

@@ -4,11 +4,11 @@ import Script from "next/script";
 import localFont from "next/font/local";
 import "./globals.css";
 
-import ScrollTopBtn from "@components/reUsable/scrollTopBtn";
+// import ScrollTopBtn from "@components/reUsable/scrollTopBtn";
 import SkipToMainContent from "@/components/reUsable/skipToMainContent";
 import Header from "@components/reUsable/header";
 import Footer from "@components/reUsable/footer";
-import { ScrollProgress } from "@/err/general";
+import { ScrollTop } from "@/err/general";
 
 const roboto = localFont({
   src: [
@@ -86,7 +86,7 @@ export default function RootLayout({ children }) {
         </main>
         <Footer />
         {/* <ScrollTopBtn />  */}
-        <ScrollProgress />
+        <ScrollTop />
       </body>
     </html>
   );
