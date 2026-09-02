@@ -44,7 +44,14 @@ export default function HamburgerMenu() {
     }
   }
 
-  
+  const shareText = "Hey! I found this really useful website for learning the driving theory test. It has helpful notes and practice questions and I think you might find it useful too: https://matshwao.pages.dev";
+  const socialLinks = {
+    facebook: "https://www.facebook.com/sharer/sharer.php?u=" +
+    encodeURIComponent("https://your-site.com") +
+    "&quote=" + encodeURIComponent(shareText),
+
+    whatsapp: "https://wa.me/?text=" + encodeURIComponent(shareText)
+  }
 
   return (
     <div className={styles.mainContainer}>
@@ -77,64 +84,31 @@ export default function HamburgerMenu() {
           <div className={styles.mobileMenuSocialLinks}>
             <p>Tell a friend about us</p>
             <ul>
-              <li><a href="#" aria-label="Visit us on Facebook" ><SiFacebook color="#1877F2" size={19} /></a></li>
-              <li><a href="#" aria-label="Visit us on Tik tok" ><SiTiktok color="#000000" size={19} /></a></li>
-              <li><a href="#" aria-label="Visit us on Instagram" ><SiInstagram color="#E4405F" size={19} /></a></li>
-              <li><a href="#" aria-label="Visit us on WhatsApp" ><SiWhatsapp color="#25D366" size={19} /></a></li>
+              <li>
+                <a 
+                  href= {socialLinks.facebook} 
+                  aria-label="Share on Facebook" 
+                  target="_blank" 
+                  rel="noreferrer" 
+                >
+                  <SiFacebook color="#1877F2" size={19} />
+                </a>
+              </li>
+              
+              <li>
+                <a 
+                  href= {socialLinks.whatsapp} 
+                  aria-label="Share on WhatsApp" 
+                  target="_blank" 
+                  rel="noreferrer" 
+                >
+                  <SiWhatsapp color="#25D366" size={19} />
+                </a>
+              </li>
             </ul>
           </div>
         </nav>
       )}
     </div>
   );
-
-  // const [isOpen, setIsOpen] = useState(false);
-
-  // return (
-  //   <div className={styles.mainContainer}>
-
-  //     <div className={styles.menuIcon}>
-  //       <Hamburger
-  //         size="16"
-  //         color="black"
-  //         toggled={isOpen}
-  //         toggle={setIsOpen}
-  //       />
-  //     </div>
-
-  //     {isOpen && (
-  //       <div className={styles.menuCon}>
-  //         <ul className={styles.internalNavLinks}>
-  //           {headerNavLinks.map(({ href, label }) => {
-  //             // logic goes here
-
-  //             return (
-  //               <li key={href} className={styles.linkIitem}>
-  //                 <Link href={href}> {label} </Link>
-  //               </li>
-  //             );
-  //           })}
-  //         </ul>
-
-  //         <div className={styles.mobileMenuSocialLinks}>
-  //           <p>Tell a friend about us</p>
-  //           <ul>
-  //             <a href="#">
-  //               <SiFacebook color="#1877F2" size={19} />
-  //             </a>
-  //             <a href="#">
-  //               <SiTiktok color="#000000" size={19} />
-  //             </a>
-  //             <a href="#">
-  //               <SiInstagram color="#E4405F" size={19} />
-  //             </a>
-  //             <a href="#">
-  //               <SiWhatsapp color="#25D366" size={19} />
-  //             </a>
-  //           </ul>
-  //         </div>
-  //       </div>
-  //     )}
-  //   </div>
-  // );
 }

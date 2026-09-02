@@ -58,9 +58,6 @@ export const metadata = {
   title: "Matshwao101",
   description:
     "Learn road license theory with structured notes, accessible quizzes, and exam preparation resources to help you succeed on your driving test.",
-    // verification: {
-    //   google: "TB1GVEFquQXCOeDRNy1PfhHkEf2iiTARMDvRp1caGYw",
-    // }
 };
 
 export default function RootLayout({ children }) {
