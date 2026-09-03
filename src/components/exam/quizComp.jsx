@@ -1,8 +1,8 @@
 "use client";
 import Timer from "@/err/timer";
 
-import styles from "./quiz.module.css"
-import { useState } from "react";
+import styles from "./quiz.module.css";
+import { useState, useRef } from "react";
 import Image from "next/image";
 import ResultMessage from "./result_message";
 import Modal from "./modal";
@@ -40,7 +40,6 @@ export default function Quiz() {
   }
   //    ---------------------------------------------------------------------------->
 
-
   let [quizQuestions] = useState(examQuestionsFx());
   let [score, setScore] = useState(0);
 
@@ -56,6 +55,13 @@ export default function Quiz() {
   let [isModalOpen, setIsModalOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [showResultScreen, setShowResultScreen] = useState(false);
+  const timerIdRef = useRef(null);
+
+  function getTimerIdRef(ref) {
+    timerIdRef.current = ref;
+
+    console.log(timerIdRef.current, "from function");
+  }
 
   function examQuestionsFx() {
     // a function that slices through each topic to make 30 exam questions array
@@ -116,7 +122,6 @@ export default function Quiz() {
     setSelectedAnswers(selectedAnswersCopy);
   }
 
-
   let unAnsweredQues = selectedAnswers.reduce((acc, answer, i) => {
     // checks for indexes of unanswerd questions when submitting
 
@@ -128,7 +133,6 @@ export default function Quiz() {
 
   function submitAnswers() {
     setHasTriedToSubmit(true);
-
     if (unAnsweredQues.length > 0) {
       return;
     }
@@ -140,11 +144,10 @@ export default function Quiz() {
   // modal logic
 
   const confirmSubmit = () => {
+    clearInterval(timerIdRef.current);
     setIsModalOpen(false);
     setSubmitted(true);
-
     setShowResultScreen(true);
-
     getMarks();
   };
 
@@ -159,30 +162,27 @@ export default function Quiz() {
     let n = 0;
 
     selectedAnswers.map((answer, i) => {
-      
-
       if (answer === shuffled[i].correctOption) {
         n = n + 1;
       }
     });
-
 
     setScore(n);
   }
 
   return (
     <div className={styles.main_container}>
-
       <h1 id={styles.quiz_title}>Road Theory Exam</h1>
 
-      {!submitted && <Timer
-        setSubmitted={setSubmitted}
-        setShowResultScreen={setShowResultScreen}
-        getMarks={getMarks}
-      />}
-
-
-
+      {!submitted && (
+        <Timer
+          submitted={submitted}
+          setSubmitted={setSubmitted}
+          setShowResultScreen={setShowResultScreen}
+          getMarks={getMarks}
+          getTimerIdRef={getTimerIdRef}
+        />
+      )}
 
       <p className={styles.quiz_instruction}>
         To pass this test, you need to correctly answer atleast 26/30 questions
@@ -191,7 +191,6 @@ export default function Quiz() {
 
       <div className={styles.q_container}>
         {shuffled.map(({ question, options, key, image, correctOption }, i) => {
-          
           return (
             <div className={styles.q_card} key={key}>
               <p className={styles.q_text}>
@@ -249,7 +248,9 @@ export default function Quiz() {
 
                   return (
                     <li key={index}>
-                      <label className={`${styles.option} ${(g && className) || ""}`}>
+                      <label
+                        className={`${styles.option} ${(g && className) || ""}`}
+                      >
                         <input
                           type="radio"
                           name={key}
@@ -273,7 +274,10 @@ export default function Quiz() {
       </p>
 
       {!submitted ? (
-        <button className={`${styles.submit} ${styles.exam_btn}`} onClick={submitAnswers}>
+        <button
+          className={`${styles.submit} ${styles.exam_btn}`}
+          onClick={submitAnswers}
+        >
           Submit
         </button>
       ) : (
@@ -283,7 +287,12 @@ export default function Quiz() {
             Your score is {score} out of {shuffled.length}. You can now review
             your answers
           </p>
-          <button className={`${styles.attempt_exam} ${styles.exam_btn}`} onClick={ () => window.location.reload() }>Close Review</button>
+          <button
+            className={`${styles.attempt_exam} ${styles.exam_btn}`}
+            onClick={() => window.location.reload()}
+          >
+            Close Review
+          </button>
         </>
       )}
 
@@ -314,7 +323,3 @@ export default function Quiz() {
     </div>
   );
 }
-
-
-
-

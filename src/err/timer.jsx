@@ -3,19 +3,16 @@ import { useState, useEffect, useRef } from "react";
 import styles from "./timer.module.css";
 
 export default function Timer({
+  submitted,
   setSubmitted,
   setShowResultScreen,
   getMarks,
+  getTimerIdRef,
 }) {
-
   const getMarksRef = useRef(getMarks);
   useEffect(() => {
     getMarksRef.current = getMarks; //ensures we have the latest value of getmarks sorrounding variables. closures
   });
-
-
-
-
 
   const getMinutesSecondsFx = (milliseconds) => {
     //this function returns minutes and seconds from milliseconds returned by getTime()
@@ -27,19 +24,11 @@ export default function Timer({
     const mins = Math.floor(milliseconds / 1000 / 60);
     const sec = Math.floor((milliseconds % 60000) / 1000);
 
-    const minsStr = String(mins).padStart(2, "0")
-const secStr = String(sec).padStart(2, "0")
+    const minsStr = String(mins).padStart(2, "0");
+    const secStr = String(sec).padStart(2, "0");
 
     return `${minsStr}:${secStr}`;
   };
-
-
-
-
-
-
-
-
 
   // --------------------------------------------------------------------------
   const [startTime] = useState(new Date());
@@ -49,10 +38,8 @@ const secStr = String(sec).padStart(2, "0")
 
   useEffect(() => {
     const timerId = setInterval(() => {
-
       let newTime = new Date().getTime();
-
-      if (newTime >= endTime.getTime()) {
+      if (newTime >= endTime.getTime() && !submitted) {
         clearInterval(timerId);
         setSubmitted(true);
         setShowResultScreen(true);
@@ -62,8 +49,10 @@ const secStr = String(sec).padStart(2, "0")
       setCountdown(getMinutesSecondsFx(endTime.getTime() - newTime));
     }, 1000);
 
+    getTimerIdRef(timerId);
+
     return () => clearInterval(timerId);
-  }, [endTime, setSubmitted, setShowResultScreen]);
+  }, []);
 
   return (
     <div className={styles.con}>
