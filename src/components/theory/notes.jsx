@@ -2,13 +2,10 @@ import Image from "next/image";
 import styles from "@components/theory/lesson.module.css";
 
 export default function RenderNotes({ notesArr, title, ...rest }) {
-  {
-    console.log(rest);
-  }
+ 
 
   return (
     <>
-      {/* <title>{title}</title> */}
       <h1 className={styles.topic_h1}>{title}</h1>
 
       <div className={styles.lessons_wrapper}>
@@ -33,7 +30,6 @@ export default function RenderNotes({ notesArr, title, ...rest }) {
             <ol className={styles.note_answers}>
               {answers.map((item) => (
                 <li key={item}>
-                  {/* <li > */}
                   {item}
                 </li>
               ))}

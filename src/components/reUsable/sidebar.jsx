@@ -27,16 +27,6 @@ export default function Aside() {
   },[])
 
 
-
-
-
-
-
-
-
-
-
-
   function toggleMenu() {
     setIsMenuOpen(!isMenuOpen);
   }
@@ -44,7 +34,6 @@ export default function Aside() {
   function closeMenu(e) {
     if (e.target.closest('a')){
       setIsMenuOpen(false)
-      console.log('heyyy5yy')
     }
   }
 
@@ -52,11 +41,9 @@ export default function Aside() {
   const pathName = usePathname(); //gets the current url
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // console.log(isMenuOpen);
 
   return (
     <div>
-      {/* <MdKeyboardArrowRight /> */}
       <button
         onClick={toggleMenu}
         className={`${styles.menu} `}
@@ -89,7 +76,7 @@ export default function Aside() {
                 }
                 href="/theory/personal-requirements"
                 className={
-                  pathName === "/theory/personal-requirements"
+                  pathName === "/theory/personal-requirements" || pathName === "/theory"
                     ? styles.active_topic
                     : ""
                 }
