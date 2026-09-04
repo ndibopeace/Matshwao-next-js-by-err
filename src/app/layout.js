@@ -3,12 +3,11 @@
 import Script from "next/script";
 import localFont from "next/font/local";
 import "./globals.css";
-
-// import ScrollTopBtn from "@components/reUsable/scrollTopBtn";
 import SkipToMainContent from "@/components/reUsable/skipToMainContent";
 import Header from "@components/reUsable/header";
 import Footer from "@components/reUsable/footer";
 import { ScrollTop } from "@/err/general";
+import AutoScrollTop from "@/err/autoScrollTop";
 
 const roboto = localFont({
   src: [
@@ -68,7 +67,7 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         />
-{/* microsoft tracking script */}
+        {/* microsoft tracking script */}
         <Script type="text/javascript" id="clarity">
           {`(function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -87,6 +86,7 @@ export default function RootLayout({ children }) {
         <Footer />
         {/* <ScrollTopBtn />  */}
         <ScrollTop />
+        <AutoScrollTop />
       </body>
     </html>
   );
