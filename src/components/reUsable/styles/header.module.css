@@ -1,7 +1,3 @@
-/* .header {
-  
-} */
-
 .headerLinks {
   position: fixed;
   top: 0;
@@ -27,9 +23,6 @@
 .navlinks a {
   display: flex;
   padding: 3.2px 16px;
-  /* border: 1px solid transparent; */
-  /* font-size: 1rem; */
-  /* font-weight: 500; */
   transition:
     background 0.2s ease,
     color 0.2s ease,
@@ -45,27 +38,23 @@
 
 .navlinks a.active {
   background: rgb(255, 255, 255);
-  /* color: blue; */
   border-bottom: solid black 2px;
 }
 
-.logo {
-  display: inline-flex;
-  align-items: center;
-  gap: 6.4px;
-  font-size: 1.3rem;
-  /* font-weight: 900; */
-  letter-spacing: -0.02em;
+.logoCon {
+  position: relative;
+  top: 5px;
+  left: -30px;
+  width: calc(var(--header-height) + 30px);
+  height: calc(var(--header-height) + 30px);
 }
 
-.logo span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.15em 0.4em;
-  padding: 3px 8px;
-  background: var(--ink);
-  color: var(--bg);
+
+.logo {
+  /* width: 100%;
+  height: 100%; */
+  object-fit: contain;
+  
 }
 
 .menuIcon {
