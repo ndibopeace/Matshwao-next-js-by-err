@@ -1,10 +1,14 @@
-import styles from "@/app/about/footer_links.module.css"
+import styles from "@/app/about/footer_links.module.css";
 
 export const metadata = {
-  title: 'How it works',
-  description: 'Learn how to best make use of our website and what to expect to make your learning fruitful'
-}
-
+  title: "How it works",
+  description:
+    "Learn how to best make use of our website and what to expect to make your learning fruitful",
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
 
 export default function HowItWorks() {
   return (
@@ -25,10 +29,11 @@ export default function HowItWorks() {
           This only applies to the notes section — and it&apos;s worth
           understanding how the notes work before you dive in. Each note is
           written as a question followed by a list of answers (A, B, C...). At
-          first glance it looks like an exam question and options to choose from, but it isn&apos;t one.
-          Every answer listed is correct. These are all valid, true responses to
-          that question. The exam will only pull one correct answer from the
-          notes together with wrong options from elsewhere.
+          first glance it looks like an exam question and options to choose
+          from, but it isn&apos;t one. Every answer listed is correct. These are
+          all valid, true responses to that question. The exam will only pull
+          one correct answer from the notes together with wrong options from
+          elsewhere.
         </p>
       </div>
 
@@ -60,7 +65,8 @@ export default function HowItWorks() {
       <div className={styles.sub_cont}>
         <h2>Get Instant Feedback</h2>
         <p>
-          See your score immediately, with a review that highlights correct and incorrect answers.
+          See your score immediately, with a review that highlights correct and
+          incorrect answers.
         </p>
       </div>
 

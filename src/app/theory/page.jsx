@@ -7,6 +7,10 @@ export const metadata = {
   title: title,
   description:
     "Study personal requirements for safe driving, including driver fitness, responsibility, and essential road safety knowledge.",
+    robots: {
+      index: false,
+      follow: true
+    }
 };
 
 export default function Lesson1() {

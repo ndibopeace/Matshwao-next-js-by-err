@@ -5,10 +5,7 @@ export const urlLastMod = {
   "/contact-us": "2026-08-05",
   "/disclaimer": "2026-08-05",
   "/privacy-policy": "2026-08-05",
-  "/curriculum": "2026-08-05", // not sure if should be indexed
-  "/how-it-works": "2026-08-05", // not sure if should be indexed
   "/frequntly-asked-questions": "2026-08-05", // not sure if should be indexed
-  // "/theory": "2026-08-05",  // not sure if should be indexed
   "/theory/personal-requirements": "2026-08-05",
   "/theory/driver-personality": "2026-08-05",
   "/theory/statutory-regulations": "2026-08-05",
@@ -24,4 +21,7 @@ export const urlLastMod = {
   "/theory/technical-conditions-and-transport": "2026-08-05",
   "/theory/good-use-of-vehicles": "2026-08-05",
   // "_/exam": "2026-08-05", // not sure if should be indexed
+  // "/curriculum": "2026-08-05",
+  // "/how-it-works": "2026-08-05",
+  // "/theory": "2026-08-05",  // not sure if should be indexed
 };
