@@ -76,6 +76,13 @@ export default function RootLayout({ children }) {
     })(window, document, "clarity", "script", "y9249ffl4l");
 `}
         </Script>
+
+        {/* google adsense script confirmation ownership */}
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1025891036757385"
+          crossorigin="anonymous"
+        ></Script>
       </head>
       <body>
         <SkipToMainContent />
