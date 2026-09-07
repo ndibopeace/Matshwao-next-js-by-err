@@ -57,6 +57,9 @@ export const metadata = {
   title: "Matshwao101",
   description:
     "Learn road license theory with structured notes, accessible quizzes, and exam preparation resources to help you succeed on your driving test.",
+    other : {
+      "google-adsense-account" : "ca-pub-1025891036757385"
+    }
 };
 
 export default function RootLayout({ children }) {
